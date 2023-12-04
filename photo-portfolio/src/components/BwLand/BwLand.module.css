@@ -1,0 +1,282 @@
+.square1{
+ 
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(20deg, #32322e, #9e9e9c, #eeefec, #272827 ,#333332, #333332) border-box;
+              /*we need to apply it to border-box bc we're gonna use the borders to remove the edges of the black padding-box*/
+    border-width: 1px 1px 1px 1px;
+}
+
+.square2{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(40deg, #333332, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square3{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(120deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square4{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(39deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square5{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(78deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square6{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(5deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square7{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(15deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+
+  border-width: 1px 1px 1px 1px;
+}
+
+.square8{
+   
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(203deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  border-width: 1px 1px 1px 1px;
+}
+
+.square9{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(210deg, #32322e, #454540, #eeefec, #272827 ,#333332) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square10{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(240deg, #32322e, #767671, #eeefec, #272827 ,#333332, #7f817f, #363735 , #8a8a8a) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square11{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(120deg, #32322e, #767671, #8c8c8c, #272827 ,#333332, #7f817f, #363735 , #acacac) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square12{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(120deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square13{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(20deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square14{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(80deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square15{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(60deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+    border-width: 1px 1px 1px 1px;
+}
+
+.square16{
+   
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(10deg, #666662, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+   border-width: 1px 1px 1px 1px;
+}
+
+.sqaure{
+  width:29px;
+  height: 22px;
+  margin-top:8px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid transparent; 
+  flex: 1 1 auto;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+.imgContainer img{
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  width: 100%;
+  height: 98%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  box-shadow: inset 0px 0px 2px 2px rgb(9, 9, 8);
+}
+
+.imgContainer{
+  flex: 1 1 auto;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+}
+
+.insideimg{
+  position: relative;
+  margin-top: 10px;
+}
+
+#first-img{
+  margin-top: 7px;
+}
+
+#rightPerf{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding-right: 1rem;
+}
+
+#leftPerf{
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.mainFilm{
+  display: flex;
+}
+
+#messed-up-block{
+    height: 24vh;
+}
+
+.filmcontainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: slide-in-from-top 2s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    top:-200vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.svg{
+  display: none;
+}
+
+.filmburn{
+  display: flex;
+  position: relative;
+  height:7vmin;
+  width: 100%;
+  filter: url(#wavy) blur(1px);
+}
+
+
+.burncontainer{
+  height: 100%;
+  width:100%;
+  position: relative;
+}
+
+.filmburn::after{
+  content: "";
+  top: 3vh;
+  left: -57vmin;
+  right: -54vmin;
+  bottom: 46vmin;
+  border: 13vmin solid hsl(0, 0%, 100%);
+  box-shadow: 0 0 5vmin hsl(40, 100%, 99%), inset 0 0 5vmin hsl(0, 0%, 91%);
+  /* filter: url(#wavy) blur(1px); */
+  position: absolute;
+  animation: slideinbottom 1.5s ;
+}
+
+.off-screen{
+  background-color: rgb(9,9,8);
+  height: 10vh;
+}
+
+@keyframes slideinbottom {
+  0% {
+    top: 14vh;
+  }
+  100% {
+    top: 3vh;
+  }
+}
+
+.hidden{
+  opacity: 0; 
+}
+
+.animateBurn{
+  animation-duration: 3s;
+  animation-name: animate-burn;
+}
+
+.igcontainer{
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  top: 3vh;
+  opacity:0;
+  transition: opacity 6s ease-in-out; 
+}
+
+.igcontainer.show{
+  opacity: 1;
+}
+
+.igicon{
+  display: flex;
+  width: 18vw;
+  height: 4vh;
+  color: rgb(9,9,8);
+}
+
+.burncontainer ul{
+  display:flex;
+  list-style: none;
+}
