@@ -1,0 +1,182 @@
+.active{
+    background-color:#000;
+    color:#fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    margin-bottom: 1.8rem;
+    height: 4.5vh;
+}
+
+.nav .title{
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav ul{
+    display: flex;
+    padding-right: 0.3rem;
+}
+
+.nav ul li{
+    list-style: none;
+}
+
+.nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.nav .menu{
+    display:flex;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    color: #000;
+    margin-right: 0.8rem;
+}
+
+nav .x{
+    display:flex;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    color: #000;
+    margin-right: 0.8rem;
+}
+
+.nav .menucontainer{
+    display: block;
+}
+
+.nav .sidemenu{
+    display: block;
+
+}
+
+.sideitems{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebartoggle{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* why doesnt opacity transiton be applied */
+.side {
+    background-color: #ffffff00;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    top:-100%;
+    transition: top 2s ease-in-out;
+    z-index: 999;
+    border-bottom-left-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.sideactive{
+    composes: side;
+    top:6.5vh;
+    transition: top 2s ease-in-out;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.dropitem{
+    padding: 0.9rem;
+    font-size: 2.2vh;
+    font-weight: bold;
+}
+
+.orienatationicon{
+    display: flex;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    color: #000;
+    margin-right: 0.8rem;
+}
+
+.orienatationicon:active{
+    background-color:#000;
+    color:#fff;
+}
+
+
+.filmburnnav {
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -999;
+}
+
+.filmburnnavshow {
+    composes: filmburnnav;
+}
+  
+.filmburnnav::after {
+    position: relative;
+    content: "";
+    top: -58vmin;
+    left: -20vmin;
+    right: -54vmin;
+    bottom: 110vmin;
+    border: 61vmin solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
+    filter: url(#wavy-nav) blur(1px);
+    transition: top 1s ease-in-out;
+}
+
+.filmburnnavshow::after {
+    position: relative;
+    content: "";
+    top: -40vmin;
+    left: -20vmin;
+    right: -54vmin;
+    bottom: 110vmin;
+    border: 61vmin solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
+    filter: url(#wavy-nav) blur(1px);
+    transition:top 1s ease-in-out;
+}
+
+.svg{
+    display: none;
+  }
