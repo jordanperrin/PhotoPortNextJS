@@ -16,11 +16,11 @@ const Navbar = () =>{
 
     //.active class in css will e applied to any active link using NavLink tag
     return (
-        <div>
+        
             <nav className= {styles.nav}>
-                <Link href="" className={styles.nav.title}> JP</Link>
+                <Link href="" className={styles.navtitle}> JP</Link>
                 
-                <ul>
+                <ul className={styles.navul}>
                     <li>
                         <Link href="/vert">
                             <Landscape className={styles.orienatationicon}/>
@@ -45,7 +45,7 @@ const Navbar = () =>{
                     <ul className= {styles.sideitems}>    
                         <li className={styles.dropDowntoggle}>
                             <Link href="/bw" className={styles.dropitem} onClick={showDropDown} >
-                                BW
+                                B/W
                             </Link>
                         </li>
                         <li className={styles.dropDowntoggle}>
@@ -67,7 +67,7 @@ const Navbar = () =>{
                     </filter>
                  </svg> 
             </nav>
-        </div>
+        
 
         );
 };
