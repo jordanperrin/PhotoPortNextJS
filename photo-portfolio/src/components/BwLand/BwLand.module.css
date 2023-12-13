@@ -264,12 +264,13 @@
   align-items: center;
   position: relative;
   z-index: 2;
-  top: 3vh;
+  top: 0vh;
   opacity:0;
   transition: opacity 6s ease-in-out; 
 }
 
-.igcontainer.show{
+.igcontainershow{
+  composes: igcontainer;
   opacity: 1;
 }
 
@@ -283,4 +284,12 @@
 .burncontainer ul{
   display:flex;
   list-style: none;
+}
+
+.link{
+  list-style: none;
+}
+
+.ul{
+  padding:0;
 }

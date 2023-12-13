@@ -121,15 +121,15 @@ export default function BwLand(){
     
         <div className = {styles.burncontainer}>
             <div ref={burnRef} className={` ${burnDivVisible ? styles['filmburn'] : styles["offscreen"]}`}></div>
-            <div className={`${burnDivVisible ? styles['igcontainer show'] : styles['igcontainer']}`}>
-              <ul className={styles.contactlist}>
+            <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
+              <ul className={styles.ul}>
                 <li>
-                  <Link href="/" >
+                  <Link href="/" className={styles.link}>
                     <IgIcon className={styles.igicon}/>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/" className={styles.link}>
                     <LuMail className={styles.igicon}/>
                   </Link>
                 </li>
