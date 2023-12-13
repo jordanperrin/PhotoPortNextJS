@@ -67,27 +67,27 @@ export default function BwLand(){
             </div>
             <div className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
-                  <Image priority={true} src={img1} />
+                  <Image priority src={img1} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority={true} src={img2} />
+                  <Image priority src={img2} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority={true} src={img3} />
+                  <Image priority src={img3} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority={true} src={img4} />
+                  <Image priority src={img4} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority={true} src={img1} />
+                  <Image priority src={img1} />
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority={true} src={img1} />
+                  <Image priority src={img1} />
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>
