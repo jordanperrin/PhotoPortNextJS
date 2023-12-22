@@ -3,15 +3,11 @@ import {useRef, useEffect, useState } from 'react';
 import { LuInstagram as IgIcon} from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import Link from 'next/link';
-import styles from './BwLand.module.css';
+import styles from './BwPort.module.css';
 import Image from 'next/image'
 import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
-import img1 from '../../../public/post1-7.jpg';
-import img2 from '../../../public/post1-4.jpg';
-import img3 from '../../../public/post1-2.jpg';
-import img4 from '../../../public/post2-8.jpg';
-import img5 from '../../../public/post2-10.jpg';
+import img1 from '../../../public/color1.jpeg';
 
 let prevVal;
 const getRandomNumber = ()=>{
@@ -22,14 +18,15 @@ const getRandomNumber = ()=>{
   return newVal;
 }
 
-export default function BwLand(){
+export default function BwPort(props){
       const burnRef = useRef();
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
 
         if(leftPerfs.length ===0){
           const listOfPerfs=[];
-          for (let i = 0; i < 26; i++) {
+          for (let i = 0; i < 53; i++) {
+            //change this to props.value
             let string = "square" + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
@@ -42,7 +39,8 @@ export default function BwLand(){
     
         if(rightPerfs.length ===0){
           const listOfPerfs=[];
-          for (let i = 0; i < 26; i++) {
+          for (let i = 0; i < 53; i++) {
+            //change this to props.value
             let string = "square" + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
@@ -69,15 +67,15 @@ export default function BwLand(){
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img2} />
+                  <Image priority src={img1} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img3} />
+                  <Image priority src={img1} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img4} />
+                  <Image priority src={img1} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>

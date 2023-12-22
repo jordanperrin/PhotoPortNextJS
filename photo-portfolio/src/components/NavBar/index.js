@@ -44,7 +44,7 @@ const Navbar = () =>{
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.sideitems}>    
                         <li className={styles.dropDowntoggle}>
-                            <Link href="/bw" className={styles.dropitem} onClick={showDropDown} >
+                            <Link href="../../app/bwport/" className={styles.dropitem} onClick={showDropDown} >
                                 B/W
                             </Link>
                         </li>

@@ -39,7 +39,7 @@ export default function Footer(){
             <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
               <ul className={styles.ul}>
                 <li>
-                  <Link href="/" className={styles.link}>
+                  <Link href="https://www.instagram.com/cinema.tif/" className={styles.link}>
                     <IgIcon className={styles.igicon}/>
                   </Link>
                 </li>
