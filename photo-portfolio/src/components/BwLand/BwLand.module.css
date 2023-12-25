@@ -1,5 +1,5 @@
 
-.square1{
+.bwsquare1{
  
   background: linear-gradient(black, black) padding-box,
               linear-gradient(20deg, #32322e, #9e9e9c, #eeefec, #272827 ,#333332, #333332) border-box;
@@ -7,42 +7,42 @@
     border-width: 1px 1px 1px 1px;
 }
 
-.square2{
+.bwsquare2{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(40deg, #333332, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square3{
+.bwsquare3{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(120deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square4{
+.bwsquare4{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(39deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square5{
+.bwsquare5{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(78deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square6{
+.bwsquare6{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(5deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square7{
+.bwsquare7{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(15deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
@@ -50,63 +50,63 @@
   border-width: 1px 1px 1px 1px;
 }
 
-.square8{
+.bwsquare8{
    
   background: linear-gradient(black, black) padding-box, 
               linear-gradient(203deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square9{
+.bwsquare9{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(210deg, #32322e, #454540, #eeefec, #272827 ,#333332) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square10{
+.bwsquare10{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(240deg, #32322e, #767671, #eeefec, #272827 ,#333332, #7f817f, #363735 , #8a8a8a) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square11{
+.bwsquare11{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(120deg, #32322e, #767671, #8c8c8c, #272827 ,#333332, #7f817f, #363735 , #acacac) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square12{
+.bwsquare12{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(120deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square13{
+.bwsquare13{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(20deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square14{
+.bwsquare14{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(80deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square15{
+.bwsquare15{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(60deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square16{
+.bwsquare16{
    
   background: linear-gradient(black, black) padding-box,
               linear-gradient(10deg, #666662, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;

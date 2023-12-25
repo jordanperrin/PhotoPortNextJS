@@ -1,117 +1,98 @@
 
 /* NEED TO CHANGE THIS TO BW SQAURES 
 THEN ADD COLOR SQUAURES  */
-.square1{
+.clrsquare1{
  
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(20deg, #32322e, #9e9e9c, #eeefec, #272827 ,#333332, #333332) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(20deg, #32322e, #573b2c, #c2724b, #272827 ,#6e5649, #333332) border-box;
               /*we need to apply it to border-box bc we're gonna use the borders to remove the edges of the black padding-box*/
     border-width: 1px 1px 1px 1px;
 }
 
-.square2{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(40deg, #333332, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+.clrsquare2{
+  background: linear-gradient(black, black) padding-box, linear-gradient(40deg, #333332, #4a3928, #c8734c,#363735, #895f3f, #363735 , #976245 ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square3{
+.clrsquare3{
    
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(120deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(120deg, #654432, #573b2c, #d4774a,#513324, #140e0b, #261810 , #976245 ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square4{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(39deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+.clrsquare4{
+  background: linear-gradient(black, black) padding-box, linear-gradient(39deg, #704a33, #140e0b, #754c42,rgb(9,9,8), #654432, #473825 , #d4774a ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square5{
+.clrsquare5{
    
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(78deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(78deg, #030303, #582d0c, #976245,#30291f, #442c08, #1e1709 , #976245 ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square6{
+.clrsquare6{
    
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(5deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(5deg, #513324, #0a0503, #c2724b,#6c3c20, #371907, #261810 , #d4774a ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square7{
+.clrsquare7{
    
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(15deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(15deg, #513324, #352218, #c2724b,#363735, #d4774a, #000 , #976245 ) border-box;
 
   border-width: 1px 1px 1px 1px;
 }
 
-.square8{
+.clrsquare8{
    
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(203deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(69deg, #c06635, #684532, #0a0909,#513a2e, #272827, #635034 , #1c1003 ) border-box;
   border-width: 1px 1px 1px 1px;
 }
 
-.square9{
+.clrsquare9{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(210deg, #32322e, #454540, #eeefec, #272827 ,#333332) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(210deg, #0a0907, #3d3025, #976245, #272827 ,#815e4b) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square10{
+.clrsquare10{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(240deg, #32322e, #767671, #eeefec, #272827 ,#333332, #7f817f, #363735 , #8a8a8a) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(240deg, #513324, #2c160b, #c2724b, #111311 ,#44290b, #c2724b, #573b2c , #513324) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square11{
+.clrsquare11{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(120deg, #32322e, #767671, #8c8c8c, #272827 ,#333332, #7f817f, #363735 , #acacac) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(120deg, #c2724b, #895f3f, #654432, #4a2917 ,rgb(9,9,8), #9e5b29, rgb(9,9,8) , #513324) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square12{
+.clrsquare12{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(120deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(120deg, #32322e, #664431, #000000, #272827 ,#976245, #000000, #976245 , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square13{
+.clrsquare13{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(20deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(20deg, #c2724b, #c2724b, #110a06, #2b1f15 ,#88543a, #3c1f0c, #573b2c , #3f2a1c) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square14{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(80deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+.clrsquare14{
+  background: linear-gradient(black, black) padding-box, linear-gradient(80deg, #32322e, #9f5734, #1f180d, #2d190f ,#c37036, #361d11, #6b4632 , #090503) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square15{
+.clrsquare15{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(60deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(60deg, #1a1410, #573b2c, #371d0f, #272827 ,#c2724b, #1f0f06, #976245 , #343434) border-box;
     border-width: 1px 1px 1px 1px;
 }
 
-.square16{
+.clrsquare16{
    
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(10deg, #666662, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
+  background: linear-gradient(black, black) padding-box, linear-gradient(10deg, #be6928, #4b2d1d, #000000, #c2724b ,#c2724b, #251610, #976245 , #000000) border-box;
    border-width: 1px 1px 1px 1px;
 }
 

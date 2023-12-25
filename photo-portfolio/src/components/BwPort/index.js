@@ -27,7 +27,7 @@ export default function BwPort(props){
           const listOfPerfs=[];
           for (let i = 0; i < 53; i++) {
             //change this to props.value
-            let string = "square" + getRandomNumber();
+            let string = "clrsquare" + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
@@ -41,7 +41,7 @@ export default function BwPort(props){
           const listOfPerfs=[];
           for (let i = 0; i < 53; i++) {
             //change this to props.value
-            let string = "square" + getRandomNumber();
+            let string = "clrsquare" + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>

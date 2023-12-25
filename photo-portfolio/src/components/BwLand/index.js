@@ -30,7 +30,7 @@ export default function BwLand(){
         if(leftPerfs.length ===0){
           const listOfPerfs=[];
           for (let i = 0; i < 26; i++) {
-            let string = "square" + getRandomNumber();
+            let string = "bwsquare" + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
