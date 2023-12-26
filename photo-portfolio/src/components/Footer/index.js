@@ -6,7 +6,7 @@ import styles from './Footer.module.css';
 import {useRef, useEffect, useState } from 'react';
 
 
-export default function Footer(){
+export default function Footer(props){
     const burnRef = useRef();
     const [burnDivVisible, setburnDivVisible] = useState(false);
 
@@ -30,12 +30,12 @@ export default function Footer(){
     
         return () => clearTimeout(delayTimeout);
       }, []);//empty array as a dependency will only run once when component is initialized
-
+      burnDivVisible
 
       return (
         <div className={styles.container}>
              <div className = {styles.burncontainer}>
-            <div ref={burnRef} className={` ${burnDivVisible ? styles['filmburn'] : styles["offscreen"]}`}></div>
+            <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["offscreen"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
             <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
               <ul className={styles.ul}>
                 <li>

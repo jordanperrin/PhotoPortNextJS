@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import Link from 'next/link';
 import styles from './NavBar.module.css';
 
-const Navbar = () =>{
+const Navbar = (props) =>{
     
     const [dropDown, setdropDown]= useState(false);
 
@@ -56,7 +56,7 @@ const Navbar = () =>{
                     </ul>     
                 </div>
 
-                <div className={`${dropDown ?  styles.filmburnnavshow : styles.filmburnnav}`}></div>
+                <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}></div>
 
                 <svg className={styles.svg}>
                     <filter id="wavy-nav">

@@ -141,18 +141,28 @@ nav .x{
 }
 
 
-.filmburnnav {
+.filmburnnavBW{
     position: absolute;
     height: 0;
     width: 0;
     z-index: -999;
 }
 
-.filmburnnavshow {
-    composes: filmburnnav;
+.filmburnnavCLR{
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -999;
+}
+
+.filmburnnavshowBW {
+    composes: filmburnnavBW;
+}
+.filmburnnavshowCLR {
+    composes: filmburnnavBW;
 }
   
-.filmburnnav::after {
+.filmburnnavBW::after {
     position: relative;
     content: "";
     top: -58vmin;
@@ -165,7 +175,7 @@ nav .x{
     transition: top 1s ease-in-out;
 }
 
-.filmburnnavshow::after {
+.filmburnnavshowBW::after {
     position: relative;
     content: "";
     top: -40vmin;
@@ -177,6 +187,39 @@ nav .x{
     filter: url(#wavy-nav) blur(1px);
     transition:top 1s ease-in-out;
 }
+
+.filmburnnavCLR::after {
+    position: relative;
+    content: "";
+    top: -58vmin;
+    left: -20vmin;
+    right: -54vmin;
+    bottom: 110vmin;
+    border: 61vmin solid;
+    /* Apply gradient border */
+    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
+    filter: url(#wavy-nav) blur(1px);
+    transition: top 1s ease-in-out;
+}
+
+.filmburnnavshowCLR::after {
+    position: relative;
+    content: "";
+    top: -40vmin;
+    left: -20vmin;
+    right: -54vmin;
+    bottom: 110vmin;
+    border: 61vmin solid;
+    /* Apply gradient border */
+    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
+    filter: url(#wavy-nav) blur(1px);
+    transition: top 1s ease-in-out;
+}
+
+
+
 
 .svg{
     display: none;

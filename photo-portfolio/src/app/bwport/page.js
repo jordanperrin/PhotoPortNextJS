@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 export default function BWPort(){
     return (
         <>
-            <NavBar/>
+            <NavBar isBW = {false}/>
                 <BwPort />
-            <Footer/>
+            <Footer isBW={false}/>
         </>
     );
 }

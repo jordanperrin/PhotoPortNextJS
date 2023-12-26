@@ -7,7 +7,7 @@ import styles from './BwPort.module.css';
 import Image from 'next/image'
 import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
-import img1 from '../../../public/color1.jpeg';
+import img1 from '../../../public/color1.jpg';
 
 let prevVal;
 const getRandomNumber = ()=>{

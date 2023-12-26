@@ -7,15 +7,6 @@ display: none;
     overflow-y: hidden;
 }
 
-.filmburn{
-display: flex;
-position: relative;
-height:7vmin;
-width: 100%;
-filter: url(#wavy) blur(1px);
-}
-
-
 .burncontainer{
 height: 100%;
 width:100%;
@@ -27,7 +18,22 @@ position: relative;
     height: 10vh;
   }
 
-.filmburn::after{
+.filmburn{
+  display: flex;
+  position: relative;
+  height:7vmin;
+  width: 100%;
+  filter: url(#wavy) blur(1px);
+  }
+
+.filmburnBW{
+  composes: filmburn;
+}
+.filmburnCLR{
+  composes: filmburn;
+}
+
+.filmburnBW::after{
 content: "";
 top: 3vh;
 left: -57vmin;
@@ -35,7 +41,22 @@ right: -54vmin;
 bottom: 46vmin;
 border: 13vmin solid hsl(0, 0%, 100%);
 box-shadow: 0 0 5vmin hsl(40, 100%, 99%), inset 0 0 5vmin hsl(0, 0%, 91%);
-/* filter: url(#wavy) blur(1px); */
+
+/* border-image: linear-gradient(to top, white 95%, orange 98%, #af3a94 99%) 15;
+box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%); */
+position: absolute;
+animation: slideinbottom 1.5s ;
+}
+
+.filmburnCLR::after{
+content: "";
+top: 3vh;
+left: -57vmin;
+right: -54vmin;
+bottom: 46vmin;
+border: 13vmin solid ;
+border-image: linear-gradient(to top, white 95%, orange 98%, #af3a94 99%) 15;
+box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
 position: absolute;
 animation: slideinbottom 1.5s ;
 }

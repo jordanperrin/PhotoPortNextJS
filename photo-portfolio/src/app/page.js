@@ -16,9 +16,9 @@ const DynamicBwLand = dynamic(() => import('../components/BwLand'), {
 export default function Home() {
   return (
     <>
-     <NavBar/>
+     <NavBar isBW={true}/>
       <DynamicBwLand />
-     <DynamicFooter/>
+     <DynamicFooter isBW={true}/>
     </>
   );
 }
