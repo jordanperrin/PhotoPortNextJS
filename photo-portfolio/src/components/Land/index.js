@@ -3,7 +3,7 @@ import {useRef, useEffect, useState } from 'react';
 import { LuInstagram as IgIcon} from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import Link from 'next/link';
-import styles from './BwLand.module.css';
+import styles from './Land.module.css';
 import Image from 'next/image'
 import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
@@ -22,15 +22,23 @@ const getRandomNumber = ()=>{
   return newVal;
 }
 
-export default function BwLand(){
+export default function Land(props){
       const burnRef = useRef();
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
+      var sqrColor;
+      
+      if(props.isBW){
+         sqrColor = "bwsquare";
+      }else{
+        sqrColor = "clrsquare";
+      }
+
 
         if(leftPerfs.length ===0){
           const listOfPerfs=[];
           for (let i = 0; i < 26; i++) {
-            let string = "bwsquare" + getRandomNumber();
+            let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
@@ -43,7 +51,7 @@ export default function BwLand(){
         if(rightPerfs.length ===0){
           const listOfPerfs=[];
           for (let i = 0; i < 26; i++) {
-            let string = "bwsquare" + getRandomNumber();
+            let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>

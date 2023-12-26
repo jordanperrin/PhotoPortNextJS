@@ -3,7 +3,7 @@ import {useRef, useEffect, useState } from 'react';
 import { LuInstagram as IgIcon} from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import Link from 'next/link';
-import styles from './BwPort.module.css';
+import styles from './Port.module.css';
 import Image from 'next/image'
 import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
@@ -18,16 +18,22 @@ const getRandomNumber = ()=>{
   return newVal;
 }
 
-export default function BwPort(props){
+export default function Port(props){
       const burnRef = useRef();
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
+      var sqrColor;
+      if(props.isBW){
+        sqrColor = "bwsquare";
+      }else{
+        sqrColor = "clrsquare";
+      }
 
         if(leftPerfs.length ===0){
           const listOfPerfs=[];
           for (let i = 0; i < 53; i++) {
             //change this to props.value
-            let string = "clrsquare" + getRandomNumber();
+            let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
@@ -41,7 +47,7 @@ export default function BwPort(props){
           const listOfPerfs=[];
           for (let i = 0; i < 53; i++) {
             //change this to props.value
-            let string = "clrsquare" + getRandomNumber();
+            let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>

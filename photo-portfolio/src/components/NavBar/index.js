@@ -22,12 +22,22 @@ const Navbar = (props) =>{
                 
                 <ul className={styles.navul}>
                     <li>
-                        <Link href="/vert">
+                        <Link href={{
+                            pathname: "/landscape",
+                            query:{
+                                isBW : props.isBW
+                            },
+                        }}>
                             <Landscape className={styles.orienatationicon}/>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/horiz">
+                        <Link href={{
+                            pathname: "/portrait",
+                            query:{
+                                isBW : props.isBW
+                            },
+                        }}>
                             <Portarit className={styles.orienatationicon}/>
                         </Link>
                     </li>
@@ -44,12 +54,22 @@ const Navbar = (props) =>{
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.sideitems}>    
                         <li className={styles.dropDowntoggle}>
-                            <Link href="../../app/bwport/" className={styles.dropitem} onClick={showDropDown} >
+                            <Link href={{
+                            pathname: "/landscape",
+                            query:{
+                                isBW : props.isBW
+                            },
+                        }} className={styles.dropitem} onClick={showDropDown} >
                                 B/W
                             </Link>
                         </li>
                         <li className={styles.dropDowntoggle}>
-                            <Link href='/color' className={styles.dropitem} onClick={showDropDown}  >
+                            <Link href={{
+                            pathname: "/landscape",
+                            query:{
+                                isBW : !props.isBW
+                            },
+                        }} className={styles.dropitem} onClick={showDropDown}  >
                                 Color
                             </Link>
                         </li>
