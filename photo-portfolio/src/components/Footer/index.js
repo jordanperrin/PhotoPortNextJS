@@ -1,9 +1,9 @@
 "use client";
-import { LuInstagram as IgIcon} from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import {useRef, useEffect, useState } from 'react';
+import IgIcon from '@/components/IgIcon';
+
 
 
 export default function Footer(props){
@@ -41,11 +41,6 @@ export default function Footer(props){
                 <li>
                   <Link href="https://www.instagram.com/cinema.tif/" className={styles.link}>
                     <IgIcon className={styles.igicon}/>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className={styles.link}>
-                    <LuMail className={styles.igicon}/>
                   </Link>
                 </li>
               </ul>

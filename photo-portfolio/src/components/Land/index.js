@@ -1,11 +1,7 @@
 "use client";
 import {useRef, useEffect, useState } from 'react';
-import { LuInstagram as IgIcon} from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
-import Link from 'next/link';
 import styles from './Land.module.css';
 import Image from 'next/image'
-import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
 import img1 from '../../../public/post1-7.jpg';
 import img2 from '../../../public/post1-4.jpg';

@@ -1,11 +1,7 @@
 "use client";
 import {useRef, useEffect, useState } from 'react';
-import { LuInstagram as IgIcon} from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
-import Link from 'next/link';
 import styles from './Port.module.css';
 import Image from 'next/image'
-import { getStaticProps } from 'next';
 //TODO: need to change the way we import these images -> use an 
 import img1 from '../../../public/color1.jpg';
 

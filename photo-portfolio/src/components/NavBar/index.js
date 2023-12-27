@@ -1,10 +1,12 @@
 "use client";
 import {useState} from 'react';
-import { MdOutlineCropLandscape as Landscape, MdOutlineCropPortrait as Portarit} from "react-icons/md";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoMdClose } from "react-icons/io";
+import SvgNav from '@/components/SvgNav';
 import Link from 'next/link';
 import styles from './NavBar.module.css';
+import LandIcon from '@/components/LandIcon';
+import PortIcon from '@/components/PortIcon';
+import BurgerIcon from '@/components/BurgerIcon';
+import CloseIcon from '@/components/CloseIcon';
 
 const Navbar = (props) =>{
     
@@ -23,21 +25,21 @@ const Navbar = (props) =>{
                 <ul className={styles.navul}>
                     <li>
                         <Link href={`/landscape/${props.onPage}`} >
-                            <Landscape className={styles.orienatationicon}/>
+                            <LandIcon className={styles.orienatationicon}/>
                         </Link>
                     </li>
                     <li>
                         <Link href={`/portrait/${props.onPage}`}>
-                            <Portarit className={styles.orienatationicon}/>
+                            <PortIcon className={styles.orienatationicon}/>
                         </Link>
                     </li>
                 </ul>
                 
-                <div className={styles.menucontainer}>
+                <div className={styles.menucontainer} onClick={showDropDown}>
                     {!dropDown ? (
-                            <GiHamburgerMenu className={styles.menu} onClick={showDropDown} />
+                            <BurgerIcon className={styles.menu} />
                         ) : (
-                            <IoMdClose className={styles.x} onClick={showDropDown} />
+                            <CloseIcon className={styles.x} />
                         )}
                 </div>
 
@@ -58,14 +60,7 @@ const Navbar = (props) =>{
 
                 <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}></div>
 
-                <svg className={styles.svg}>
-                    <filter id="wavy-nav">
-                    <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="4" seed="2">
-                        <animate attributeName="baseFrequency" dur="80s" values="0.02;0.005;0.02" repeatCount="indefinite" />
-                    </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" scale="25" />
-                    </filter>
-                 </svg> 
+                <SvgNav/>
             </nav>
         
 
