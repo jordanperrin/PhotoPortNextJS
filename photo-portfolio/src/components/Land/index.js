@@ -23,7 +23,6 @@ const getRandomNumber = ()=>{
 }
 
 export default function Land(props){
-      const burnRef = useRef();
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
       var sqrColor;

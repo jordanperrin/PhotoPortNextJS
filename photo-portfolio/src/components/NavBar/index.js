@@ -22,22 +22,12 @@ const Navbar = (props) =>{
                 
                 <ul className={styles.navul}>
                     <li>
-                        <Link href={{
-                            pathname: "/landscape",
-                            query:{
-                                isBW : props.isBW
-                            },
-                        }}>
+                        <Link href={`/landscape/${props.onPage}`} >
                             <Landscape className={styles.orienatationicon}/>
                         </Link>
                     </li>
                     <li>
-                        <Link href={{
-                            pathname: "/portrait",
-                            query:{
-                                isBW : props.isBW
-                            },
-                        }}>
+                        <Link href={`/portrait/${props.onPage}`}>
                             <Portarit className={styles.orienatationicon}/>
                         </Link>
                     </li>
@@ -54,22 +44,12 @@ const Navbar = (props) =>{
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.sideitems}>    
                         <li className={styles.dropDowntoggle}>
-                            <Link href={{
-                            pathname: "/landscape",
-                            query:{
-                                isBW : props.isBW
-                            },
-                        }} className={styles.dropitem} onClick={showDropDown} >
+                            <Link href="/landscape/bw" className={styles.dropitem} onClick={showDropDown} >
                                 B/W
                             </Link>
                         </li>
                         <li className={styles.dropDowntoggle}>
-                            <Link href={{
-                            pathname: "/landscape",
-                            query:{
-                                isBW : !props.isBW
-                            },
-                        }} className={styles.dropitem} onClick={showDropDown}  >
+                            <Link href='/landscape/clr' className={styles.dropitem} onClick={showDropDown}  >
                                 Color
                             </Link>
                         </li>

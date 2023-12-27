@@ -149,10 +149,7 @@ nav .x{
 }
 
 .filmburnnavCLR{
-    position: absolute;
-    height: 0;
-    width: 0;
-    z-index: -999;
+   composes:filmburnnavBW;
 }
 
 .filmburnnavshowBW {

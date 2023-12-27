@@ -16,9 +16,9 @@ const DynamicLandscape = dynamic(() => import('../components/Land'), {
 export default function Home() {
   return (
     <>
-     <NavBar isBW={true}/>
-      <DynamicLandscape isBW={true}/>
-     <DynamicFooter isBW={true}/>
+     <NavBar isBW={false}/>
+      <DynamicLandscape isBW={false}/>
+     <DynamicFooter isBW={false}/>
     </>
   );
 }
