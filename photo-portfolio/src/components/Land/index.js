@@ -68,27 +68,27 @@ export default function Land(props){
             </div>
             <div className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
-                  <Image priority src={img1} />
+                  <Image priority src={img1} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img2} />
+                  <Image priority src={img2} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img3} />
+                  <Image priority src={img3} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img4} />
+                  <Image priority src={img4} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img1} />
+                  <Image priority src={img1} placeholder='blur'/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img1} />
+                  <Image priority src={img1} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>
