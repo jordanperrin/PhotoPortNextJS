@@ -1,5 +1,5 @@
 "use client";
-import {useRef, useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import styles from './Land.module.css';
 import Image from 'next/image'
 //TODO: need to change the way we import these images -> use an 
@@ -20,26 +20,22 @@ const getRandomNumber = ()=>{
 }
 
 export default function Land(props){
-
-      // console.log(vw);
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
-      const [vw, setVw] = useState(0);
       const [perfCount, setPerfCount] = useState(20);
-      var sqrColor;
+      const [initialRendered, setInitialinitialRendered] = useState(false);
+      let sqrColor;
+      let vw = 0;
 
-      
-      
       if(props.isBW){
          sqrColor = "bwsquare";
       }else{
         sqrColor = "clrsquare";
       }
 
-
-        if(leftPerfs.length ===0){
-          const listOfPerfs=[];
-          for (let i = 0; i < perfCount; i++) {
+      const generatePerfs = (count) => {
+          let listOfPerfs=[];
+          for (let i = 0; i < count; i++) {
             let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
@@ -48,30 +44,39 @@ export default function Land(props){
             );
           }
           setleftPerfs(listOfPerfs);
-        }
-    
-        if(rightPerfs.length ===0){
-          const listOfPerfs=[];
-          for (let i = 0; i < perfCount; i++) {
+          listOfPerfs=[];
+          for (let i = 0; i < count; i++) {
             let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
               </div>
             );
-          }
+          
           setRightPerfs(listOfPerfs);
         }
+      }
 
-        useEffect(() =>{
-          setVw(Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0));
-          if(vw === 390){
-            setPerfCount(26);
-          }
-        }, [vw])
-    
-        
+      //runs after inital render to get
+      useEffect(() => {
+        vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+         if(vw === 390){
+          setPerfCount(26);
+        }
+      }, []);
+
       
+      useEffect(()=>{
+        generatePerfs(perfCount);
+      }, [perfCount])
+
+      if(!initialRendered){
+        generatePerfs(perfCount);
+        setInitialinitialRendered(true);
+        console.log(vw);
+      }
+        
+
       return (
         <div className={styles.filmcontainer}> 
           <div className={styles.mainFilm}>
@@ -114,8 +119,6 @@ export default function Land(props){
               </div>
             </div>
           </div>
-    
-       
         </div>
     );
 }
