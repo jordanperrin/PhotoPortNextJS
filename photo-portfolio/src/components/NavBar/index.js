@@ -9,7 +9,7 @@ import BurgerIcon from '@/components/BurgerIcon';
 import CloseIcon from '@/components/CloseIcon';
 
 const Navbar = (props) =>{
-    
+
     const [dropDown, setdropDown]= useState(false);
 
     const showDropDown = () =>{

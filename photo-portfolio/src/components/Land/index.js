@@ -16,12 +16,19 @@ const getRandomNumber = ()=>{
     newVal =  Math.floor(Math.random() * 16) + 1;
   }
   return newVal;
+
 }
 
 export default function Land(props){
+
+      // console.log(vw);
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
+      const [vw, setVw] = useState(0);
+      const [perfCount, setPerfCount] = useState(20);
       var sqrColor;
+
+      
       
       if(props.isBW){
          sqrColor = "bwsquare";
@@ -32,7 +39,7 @@ export default function Land(props){
 
         if(leftPerfs.length ===0){
           const listOfPerfs=[];
-          for (let i = 0; i < 26; i++) {
+          for (let i = 0; i < perfCount; i++) {
             let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
@@ -45,7 +52,7 @@ export default function Land(props){
     
         if(rightPerfs.length ===0){
           const listOfPerfs=[];
-          for (let i = 0; i < 26; i++) {
+          for (let i = 0; i < perfCount; i++) {
             let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
               <div className={`${styles.sqaure} ${styles[string]}`}>
@@ -55,8 +62,15 @@ export default function Land(props){
           }
           setRightPerfs(listOfPerfs);
         }
+
+        useEffect(() =>{
+          setVw(Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0));
+          if(vw === 390){
+            setPerfCount(26);
+          }
+        }, [vw])
     
-      
+        
       
       return (
         <div className={styles.filmcontainer}> 

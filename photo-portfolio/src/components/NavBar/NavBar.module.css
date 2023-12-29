@@ -25,9 +25,10 @@
 
 .navul{
     display: flex;
-    padding-right: 15vw;
     justify-content: center;
-    padding-left: 20vw;
+    margin-left: 4.7em;
+    margin-right: 3.6em;
+    padding: 0;
 }
 
 .nav ul li{
@@ -43,7 +44,6 @@
     border-radius: 0.5rem;
 }
 
-
 .nav .menu{
     display:flex;
     right:0.5rem;
@@ -52,7 +52,6 @@
     width: 2.25rem;
     height: 2rem;
     color: #000;
-    margin-left: 0.5vw;
 }
 
 nav .x{
@@ -82,14 +81,6 @@ nav .x{
     align-items: center;
     padding-right: 1.9rem;
     margin-top: 0;
-}
-
-.sidebartoggle{
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* why doesnt opacity transiton be applied */
@@ -140,7 +131,6 @@ nav .x{
     color:#fff;
 }
 
-
 .filmburnnavBW{
     position: absolute;
     height: 0;
@@ -163,9 +153,8 @@ nav .x{
     position: relative;
     content: "";
     top: -58vmin;
-    left: -20vmin;
-    right: -54vmin;
-    bottom: 110vmin;
+    left: -19vmin;
+    right: -52vmin;
     border: 61vmin solid hsl(0, 0%, 100%);
     box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
@@ -176,9 +165,9 @@ nav .x{
     position: relative;
     content: "";
     top: -40vmin;
-    left: -20vmin;
+    left: -19vmin;
     right: -54vmin;
-    bottom: 110vmin;
+    bottom: 46vmin;
     border: 61vmin solid hsl(0, 0%, 100%);
     box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
@@ -188,11 +177,11 @@ nav .x{
 .filmburnnavCLR::after {
     position: relative;
     content: "";
-    top: -58vmin;
-    left: -20vmin;
-    right: -54vmin;
-    bottom: 110vmin;
-    border: 61vmin solid;
+    top: -66vmin;
+    left: -26vmin;
+    right: -30vmin;
+    bottom: 46vmin;
+    border: 69vmin solid;
     /* Apply gradient border */
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
@@ -203,14 +192,25 @@ nav .x{
 .filmburnnavshowCLR::after {
     position: relative;
     content: "";
-    top: -40vmin;
-    left: -20vmin;
+    top: -48vmin;
+    left: -34vmin;
     right: -54vmin;
-    bottom: 110vmin;
-    border: 61vmin solid;
+    bottom: 46vmin;
+    border: 69vmin solid;
     /* Apply gradient border */
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
+}
+
+@media (min-width: 412px){
+    .navul{
+        margin-left: 3.3em;
+        margin-right: 4em;
+    }
+
+    .sideitems{
+        padding-right: 1em;
+    }
 }
