@@ -24,12 +24,12 @@ const Navbar = (props) =>{
                 
                 <ul className={styles.navul}>
                     <li>
-                        <Link href={`/landscape/${props.onPage}`} >
+                        <Link href={`/landscape/${props.onPage}`} className={styles.a}>
                             <LandIcon className={styles.orienatationicon}/>
                         </Link>
                     </li>
                     <li>
-                        <Link href={`/portrait/${props.onPage}`}>
+                        <Link href={`/portrait/${props.onPage}`} className={styles.a}>
                             <PortIcon className={styles.orienatationicon}/>
                         </Link>
                     </li>
@@ -46,12 +46,12 @@ const Navbar = (props) =>{
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.sideitems}>    
                         <li className={styles.dropDowntoggle}>
-                            <Link href="/landscape/bw" className={styles.dropitem} onClick={showDropDown} >
+                            <Link href="/landscape/bw" className={styles.dropitem1} onClick={showDropDown} >
                                 B/W
                             </Link>
                         </li>
                         <li className={styles.dropDowntoggle}>
-                            <Link href='/landscape/clr' className={styles.dropitem} onClick={showDropDown}  >
+                            <Link href='/landscape/clr' className={styles.dropitem2} onClick={showDropDown}  >
                                 Color
                             </Link>
                         </li>

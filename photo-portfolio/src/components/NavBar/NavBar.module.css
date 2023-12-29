@@ -13,6 +13,7 @@
     z-index: 9999;
     margin-bottom: 1.8rem;
     height: 4.5vh;
+    width:100%;
 }
 
 .navtitle{
@@ -26,8 +27,8 @@
 .navul{
     display: flex;
     justify-content: center;
-    margin-left: 4.7em;
-    margin-right: 3.6em;
+    margin-left: 2.5em;
+    margin-right: 1.6em;
     padding: 0;
 }
 
@@ -35,7 +36,7 @@
     list-style: none;
 }
 
-.nav ul li a{
+.nav ul li .a{
     display: block;
     text-decoration: none;
     color: #000;
@@ -52,6 +53,7 @@
     width: 2.25rem;
     height: 2rem;
     color: #000;
+    width:80%;
 }
 
 nav .x{
@@ -62,7 +64,7 @@ nav .x{
     width: 2.25rem;
     height: 2rem;
     color: #000;
-    margin-right: 0.8rem;
+    width:80%;
 }
 
 .nav .menucontainer{
@@ -109,10 +111,18 @@ nav .x{
     transition: opacity 2s ease-in-out;
 }
 
-.dropitem{
+.dropitem1{
     padding: 0.9rem;
     font-size: 2.2vh;
     font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    padding-left: 2em;
+    padding-right: 1.1em;
+}
+
+.dropitem2{
+    composes:dropitem1;
 }
 
 .orienatationicon{
@@ -178,7 +188,7 @@ nav .x{
     position: relative;
     content: "";
     top: -66vmin;
-    left: -26vmin;
+    /* left: -26vmin; */
     right: -30vmin;
     bottom: 46vmin;
     border: 69vmin solid;
@@ -193,7 +203,7 @@ nav .x{
     position: relative;
     content: "";
     top: -48vmin;
-    left: -34vmin;
+    /* left: -34vmin; */
     right: -54vmin;
     bottom: 46vmin;
     border: 69vmin solid;
@@ -202,6 +212,17 @@ nav .x{
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
+}
+
+/* @media (min-width: 390px){
+    .navul{
+        margin-left: 4.7em;
+        margin-right: 3.6em;
+    }
+
+    .sideitems{
+        padding-right: 1.9rem;
+    }
 }
 
 @media (min-width: 412px){
@@ -213,4 +234,4 @@ nav .x{
     .sideitems{
         padding-right: 1em;
     }
-}
+} */
