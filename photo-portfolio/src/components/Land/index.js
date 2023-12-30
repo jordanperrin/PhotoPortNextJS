@@ -60,8 +60,16 @@ export default function Land(props){
       //runs after inital render to get
       useEffect(() => {
         vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-         if(vw === 390){
-          setPerfCount(26);
+        
+        switch(vw){
+          case 375:
+            setPerfCount(24);
+            break;
+          case 390:
+            setPerfCount(26);
+            break;
+          default:
+            break;
         }
       }, []);
 
