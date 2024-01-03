@@ -24,6 +24,21 @@ export default function Land(props){
       const [rightPerfs, setRightPerfs] = useState([]);
       const [perfCount, setPerfCount] = useState(20);
       const [initialRendered, setInitialinitialRendered] = useState(false);
+      const [windowSize, setWindowSize] = useState(320);
+
+
+      useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowSize(window.innerWidth);
+        };
+        setWindowSize(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
       let sqrColor;
       let vw = 0;
 
@@ -57,21 +72,52 @@ export default function Land(props){
         }
       }
 
-      //runs after inital render to get
+      //runs when screen width is chanegd
       useEffect(() => {
-        vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-        
-        switch(vw){
-          case 375:
+          if(windowSize >= 335 && windowSize < 342){
+            setPerfCount(21);
+          }else if(windowSize >= 342 && windowSize < 365){
+            setPerfCount(22)
+          }else if (windowSize >= 365 && windowSize < 382 ){
             setPerfCount(24);
-            break;
-          case 390:
+          }else if (windowSize >= 382 && windowSize< 408){
             setPerfCount(26);
-            break;
-          default:
-            break;
-        }
-      }, []);
+           }else if(windowSize >= 408 && windowSize <434){
+            setPerfCount(28);
+           }else if(windowSize >= 434 && windowSize < 460 ){
+            setPerfCount(30);
+           }else if(windowSize >= 460 && windowSize < 487){
+            setPerfCount(32);
+           }else if(windowSize >= 487 && windowSize < 515){
+            setPerfCount(34);
+           }else if(windowSize >= 515 && windowSize < 538){
+            setPerfCount(36);
+           }else if(windowSize >= 538 && windowSize < 566){
+            setPerfCount(38);
+           }else if(windowSize >= 566 && windowSize < 590){
+            setPerfCount(40);
+           }else if(windowSize >= 590 && windowSize < 617){
+            setPerfCount(42);
+           }else if(windowSize >= 617 && windowSize < 643){
+            setPerfCount(44);
+           }else if(windowSize >= 643 && windowSize < 670){
+            setPerfCount(46);
+           }else if(windowSize >= 670 && windowSize < 695){
+            setPerfCount(48);
+           }else if(windowSize >= 695 && windowSize < 721){
+            setPerfCount(50);
+           }else if(windowSize >= 721 && windowSize < 747){
+            setPerfCount(52);
+           }else if(windowSize >= 747 && windowSize < 758){
+            setPerfCount(44);
+           }else if(windowSize >= 758 && windowSize < 786){
+            setPerfCount(46);
+           }else if(windowSize >= 820 && windowSize < 840){
+            setPerfCount(48);
+           }else if(windowSize >= 1024 && windowSize ){
+            setPerfCount(52);
+           }
+        }, [windowSize]);
 
       
       useEffect(()=>{
@@ -81,11 +127,11 @@ export default function Land(props){
       if(!initialRendered){
         generatePerfs(perfCount);
         setInitialinitialRendered(true);
-        console.log(vw);
       }
         
 
       return (
+        
         <div className={styles.filmcontainer}> 
           <div className={styles.mainFilm}>
             <div className={styles.leftPerfs}>

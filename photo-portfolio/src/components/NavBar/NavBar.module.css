@@ -174,7 +174,7 @@ nav .x{
 .filmburnnavshowBW::after {
     position: relative;
     content: "";
-    top: -40vmin;
+    top: -53vmin;
     left: -19vmin;
     right: -54vmin;
     bottom: 46vmin;
@@ -202,7 +202,7 @@ nav .x{
 .filmburnnavshowCLR::after {
     position: relative;
     content: "";
-    top: -48vmin;
+    top: -53vmin;
     /* left: -34vmin; */
     right: -54vmin;
     bottom: 46vmin;
