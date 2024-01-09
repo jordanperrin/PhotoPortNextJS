@@ -208,13 +208,6 @@
 }
 
 .sqaure{
-  /* width:29px;
-  height: 22px;
-  margin-top:8px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid transparent; 
-  flex: 1 1 auto; */
   width: 1.8em;
   height: 1.4em;
   margin-top: 0.5em;
@@ -251,6 +244,7 @@
   height: 100%;
   position: relative;
   margin: 0px;
+  padding: 0.53em;
 }
 
 .insideimg{
@@ -315,24 +309,20 @@
 
 @media (min-width: 1024px){
   .sqaure{
-    width: 2.5em;
-    height: 1.9em;
+    width: 3.5em;
+    height: 2.6em;
     margin-top: 0.5em;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
     border-radius: 0.5em;
   }
-
 }
-
-/* //ipad air */
-/* @media (min-width: 820px){
+@media (min-width: 1440px){
   .sqaure{
-    width: 9em;
-    height: 6.9em;
+    width: 5.5em;
+    height: 4.6em;
     margin-top: 0.5em;
-    margin-bottom: 7.45em;
-    border-radius: 2.2em;
+    margin-bottom: 2em;
+    border-radius: 0.9em;
+    /* padding: 2rem; */
   }
-
-} */
-
+}

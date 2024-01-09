@@ -119,6 +119,7 @@ export default function Land(props){
            }
         }, [windowSize]);
 
+        console.log(windowSize)
       
       useEffect(()=>{
         generatePerfs(perfCount);
@@ -153,15 +154,15 @@ export default function Land(props){
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img4} placeholder='blur'/>
+                  <Image src={img4} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img1} placeholder='blur'/>
+                  <Image src={img1} placeholder='blur'/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img1} placeholder='blur'/>
+                  <Image src={img1} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>
