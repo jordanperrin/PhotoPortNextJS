@@ -4,7 +4,7 @@
 }
 
 .burncontainer{
-  height: 100%;
+  height: 0vh;
   width:100%;
   position: relative;
 }
@@ -17,10 +17,12 @@
 .filmburn{
   display: flex;
   position: relative;
-  height:7vmin;
+  height:60vmin;
   width: 100%;
-  filter: url(#wavy) blur(1px);
-  }
+  filter: url('#wavy') blur(1px);
+  -webkit-transform: translate3d(0,0,0);
+
+}
 
 .filmburnBW{
   composes: filmburn;
@@ -79,6 +81,11 @@ transition: opacity 6s ease-in-out;
 .igcontainershow{
 composes: igcontainer;
 opacity: 1;
+}
+
+.svg{
+  width: 100px;
+  height:100px;
 }
 
 .igicon{

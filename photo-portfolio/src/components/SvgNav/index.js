@@ -3,7 +3,8 @@ import styles from './SvgNav.module.css';
 export default function SvgNav(props){
     
     return(
-        <>
+        <div>
+            <defs>
          <svg id="burn" className={styles.svg}>
                         <filter id="wavy-nav">
                         <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="4" seed="2">
@@ -12,6 +13,7 @@ export default function SvgNav(props){
                         <feDisplacementMap in="SourceGraphic" scale="25" />
                         </filter>
             </svg> 
-        </>
+            </defs>
+        </div>
     );
 }

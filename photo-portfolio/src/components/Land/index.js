@@ -118,8 +118,6 @@ export default function Land(props){
             setPerfCount(52);
            }
         }, [windowSize]);
-
-        console.log(windowSize)
       
       useEffect(()=>{
         generatePerfs(perfCount);

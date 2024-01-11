@@ -34,8 +34,8 @@ export default function Footer(props){
 
       return (
         <div className={styles.container}>
-             <div className = {styles.burncontainer}>
-            <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["offscreen"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
+          <div className = {styles.burncontainer}>
+            <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["filmburnBW"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
             <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
               <ul className={styles.ul}>
                 <li>
@@ -46,15 +46,19 @@ export default function Footer(props){
               </ul>
             </div>
           </div>
-    
-          <svg className={styles.svg}>
-            <filter id="wavy">
-              <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2">
-                <animate attributeName="baseFrequency" values="0.02;0.005;0.02" repeatCount="indefinite" />
-              </feTurbulence>
-              <feDisplacementMap in="SourceGraphic" scale="25" />
-            </filter>
-          </svg> 
+
+          <div>
+            <svg className={styles.svg}>
+              <defs>
+                <filter id="wavy">
+                  <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2">
+                    <animate attributeName="baseFrequency" values="0.02;0.005;0.02" repeatCount="indefinite" />
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" scale="25" />
+                </filter>
+              </defs>
+            </svg> 
+          </div>
         </div>
       );
 }
