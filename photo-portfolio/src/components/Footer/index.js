@@ -35,7 +35,7 @@ export default function Footer(props){
       return (
         <div className={styles.container}>
           <div className = {styles.burncontainer}>
-            <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["filmburnBW"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
+            <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["offscreen"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
             <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
               <ul className={styles.ul}>
                 <li>

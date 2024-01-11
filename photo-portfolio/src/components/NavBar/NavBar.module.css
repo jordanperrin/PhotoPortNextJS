@@ -162,8 +162,8 @@ nav .x{
     position: relative;
     content: "";
     top: -57vmin;
-    left: -26vmin;
-    right: -52vmin;
+    left: -15vmin;
+    right: -54vmin;
     border: 61vmin solid hsl(0, 0%, 100%);
     box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
@@ -174,7 +174,7 @@ nav .x{
     position: relative;
     content: "";
     top: -51vmin;
-    left: -26vmin;
+    left: -15vmin;
     right: -54vmin;
     bottom: 46vmin;
     border: 61vmin solid hsl(0, 0%, 100%);
@@ -196,7 +196,6 @@ nav .x{
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
-    -webkit-transform: translate3d(0,0,0);
 }
 
 .filmburnnavshowCLR::after {
@@ -212,7 +211,6 @@ nav .x{
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
-    -webkit-transform: translate3d(0,0,0);
 }
 
 /* @media (min-width: 390px){
