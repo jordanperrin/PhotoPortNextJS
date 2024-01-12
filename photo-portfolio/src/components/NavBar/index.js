@@ -19,10 +19,11 @@ const Navbar = (props) =>{
     //.active class in css will e applied to any active link using NavLink tag
     return (
         
-            <nav className= {styles.nav}>
-                <Link href="" className={styles.navtitle}> JP</Link>
-                
+            <nav className= {styles.nav}>                
                 <ul className={styles.navul}>
+                    <li>
+                        <Link href="" className={styles.navtitle}> JP</Link>
+                    </li>
                     <li>
                         <Link href={`/landscape/${props.onPage}`} className={styles.a}>
                             <LandIcon className={styles.orienatationicon}/>
@@ -33,15 +34,18 @@ const Navbar = (props) =>{
                             <PortIcon className={styles.orienatationicon}/>
                         </Link>
                     </li>
-                </ul>
-                
-                <div className={styles.menucontainer} onClick={showDropDown}>
-                    {!dropDown ? (
+                    <li>
+                    <div className={styles.a} onClick={showDropDown}>
+                      {!dropDown ? (
                             <BurgerIcon className={styles.menu} />
                         ) : (
-                            <CloseIcon className={styles.x} />
+                            <CloseIcon className={styles.menu} />
                         )}
-                </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                
 
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.sideitems}>    
