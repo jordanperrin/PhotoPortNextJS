@@ -4,14 +4,21 @@
 }
 
 .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     z-index: 9999;
     height: 4.5vh;
     margin: 0;
     padding: 0;
-    width: -webkit-fill-available;
+    width: -moz-available; /*needs to be second for firefox to recognize it*/
+    top: 0.32vh;
+    left: -10px;
+    right: -10px;
 }
 
 .navtitle{
@@ -26,12 +33,24 @@
     padding-right:1.1em;
 }
 
+.hideNavElement{
+    visibility: hidden;
+}
+
 .navul{
     display: flex;
     justify-content:space-between;
     margin:0;
     padding: 0;
-    width:100%
+    width:100%;
+}
+
+.navulDrop{
+    display: flex;
+    justify-content:space-between;
+    margin:0;
+    padding: 0;
+    width:100%;
 }
 
 .nav ul li{
@@ -64,36 +83,27 @@ nav .x{
 }
 
 .sideitems{
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 1.9rem;
-    margin-top: 0;
+    justify-content:space-between;
+    margin:0;
+    padding: 0;
+    width:100%;
 }
 
 /* why doesnt opacity transiton be applied */
 .side {
-    background-color: #ffffff00;
     position: absolute;
     opacity: 0;
-    top:-100%;
+    top: -160%;
     transition: top 2s ease-in-out;
-    z-index: 999;
-    border-bottom-left-radius: 0.7rem;
-    display: flex;
-    align-items: center;
     height: 100%;
-    flex-wrap: wrap;
     align-content: space-between;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
 }
 
 .sideactive{
     composes: side;
-    top:6.5vh;
+    top: 120%;
     opacity: 1;
     transition: opacity 2s ease-in-out;
 }
@@ -104,8 +114,7 @@ nav .x{
     font-weight: bold;
     text-decoration: none;
     color: #000;
-    padding-left: 2em;
-    padding-right: 1.1em;
+    padding-right: 1.6em;
 }
 
 .dropitem2{
@@ -150,11 +159,13 @@ nav .x{
 .filmburnnavBW::after {
     position: relative;
     content: "";
-    top: -57vmin;
-    left: -15vmin;
+    top: -66vmin;
+    left: -26vmin;
     right: -54vmin;
-    border: 61vmin solid hsl(0, 0%, 100%);
-    box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
+    bottom: 46vmin;
+    border: 69vmin solid;
+    border-image: linear-gradient(to bottom, white 95%, #7b7b7b 98%, #000 99%);
+    box-shadow: 0 0 6vmin #4e4e4b, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
 }
@@ -162,14 +173,16 @@ nav .x{
 .filmburnnavshowBW::after {
     position: relative;
     content: "";
-    top: -51vmin;
-    left: -15vmin;
+    top: -53vmin;
+    left: -26vmin;
     right: -54vmin;
     bottom: 46vmin;
-    border: 61vmin solid hsl(0, 0%, 100%);
-    box-shadow: 0 0 3vmin hsl(0, 0%, 100%), inset 0 0 9vmin hsl(0, 0%, 100%);
+    border: 69vmin solid;
+    /* Apply gradient border */
+    border-image: linear-gradient(to bottom, white 95%, #7b7b7b 98%, #000 99%);
+    box-shadow: 0 0 6vmin #000000, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
-    transition:top 1s ease-in-out;
+    transition: top 1s ease-in-out;
 }
 
 .filmburnnavCLR::after {
@@ -180,7 +193,6 @@ nav .x{
     right: -54vmin;
     bottom: 46vmin;
     border: 69vmin solid;
-    /* Apply gradient border */
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);

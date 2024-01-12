@@ -48,16 +48,24 @@ const Navbar = (props) =>{
                 
 
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
-                    <ul className= {styles.sideitems}>    
-                        <li className={styles.dropDowntoggle}>
+                    <ul className= {styles.navulDrop}> 
+                        <li>
+                            <Link href="" className={`${styles.navtitle} ${styles.hideNavElement}`}> JP</Link>
+                        </li>
+                        <li>
                             <Link href="/landscape/bw" className={styles.dropitem1} onClick={showDropDown} >
                                 B/W
                             </Link>
                         </li>
-                        <li className={styles.dropDowntoggle}>
+                        <li >
                             <Link href='/landscape/clr' className={styles.dropitem2} onClick={showDropDown}  >
                                 Color
                             </Link>
+                        </li>
+                        <li>
+                            <div className={`${styles.a} ${styles.hideNavElement}`} >
+                                 <CloseIcon className={styles.menu} />
+                             </div>
                         </li>
                     </ul>     
                 </div>
