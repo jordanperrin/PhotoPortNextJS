@@ -69,8 +69,10 @@ const Navbar = (props) =>{
                         </li>
                     </ul>     
                 </div>
-
-                <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}></div>
+                <div className={styles.filmburnnavUnder}></div>
+                <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}>
+                </div>
+                
 
                 <SvgNav/>
             </nav>

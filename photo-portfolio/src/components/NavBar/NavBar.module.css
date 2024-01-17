@@ -143,6 +143,28 @@ nav .x{
     width: 0;
     z-index: -999;
     -webkit-transform: translate3d(-10px,0,0);
+    filter: url(#wavy-nav) blur(1px);
+}
+
+.filmfilmburnnavUnder{
+    position: relative;
+    height: 0;
+    width: 0;
+    filter: url(#wavy-nav) blur(9px);
+}
+.filmburnnavUnder::after{
+    position: relative;
+    content: "";
+    /* top: -66vmin; */
+    left: -44vmin;
+    right: -54vmin;
+    bottom: 46vmin;
+    border: 51vmin solid;
+    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
+    filter: url(#wavy-nav) blur(9px);
+    /* transition: top 1s ease-in-out; */
+    z-index: -999;
 }
 
 .filmburnnavCLR{
@@ -197,6 +219,7 @@ nav .x{
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
+    transform: translateZ(0);
 }
 
 .filmburnnavshowCLR::after {
