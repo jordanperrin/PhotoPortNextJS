@@ -50,9 +50,9 @@ export default function Footer(props){
           <div>
             <svg className={styles.svg}>
               <defs>
-                <filter id="wavy">
-                  <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2">
-                    <animate attributeName="baseFrequency" values="0.02;0.005;0.02" repeatCount="indefinite" />
+                <filter id="wavy" xmlns="http://www.w3.org/2000/svg" >
+                  <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2"  width="1000%" height="103%">
+                    <animate attributeName="baseFrequency" values="0.02;0.005;0.02" />
                   </feTurbulence>
                   <feDisplacementMap in="SourceGraphic" scale="25" />
                 </filter>

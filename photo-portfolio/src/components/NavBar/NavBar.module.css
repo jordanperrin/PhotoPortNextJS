@@ -137,17 +137,17 @@ nav .x{
     color:#fff;
 }
 
-.filmburnnavBW{
+/* .filmburnnavBW{
     position: absolute;
     height: 0;
     width: 0;
     z-index: -999;
-    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
     filter: url(#wavy-nav) blur(1px);
     opacity: 90%;
-}
+} */
 
-.filmfilmburnnavUnder{
+.filmburnnavUnder{
     position: absolute;
     height: 0;
     width: 0;
@@ -158,29 +158,34 @@ nav .x{
 .filmburnnavUnder::after{
     position: relative;
     content: "";
-    top: -46vmin;
-    left: -44vmin;
+    top: -36vmin;
+    left: -4vmin;
     right: -54vmin;
     bottom: 46vmin;
     border: 51vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(9px);
-    /* transition: top 1s ease-in-out; */
-   
+    transition: top 1s ease-in-out;
 }
 
 .filmburnnavCLR{
-   composes:filmburnnavBW;
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -999;
+    filter: blur(3px);
+    transform: translate3d(0,0,0);
+    /* opacity: 90%; */
 }
 
-.filmburnnavshowBW {
+/* .filmburnnavshowBW {
     composes: filmburnnavBW;
-}
+}*/
 .filmburnnavshowCLR {
-    composes: filmburnnavBW;
-}
-  
+    composes: filmburnnavCLR;
+} 
+/*   
 .filmburnnavBW::after {
     position: relative;
     content: "";
@@ -203,40 +208,35 @@ nav .x{
     right: -54vmin;
     bottom: 46vmin;
     border: 69vmin solid;
-    /* Apply gradient border */
     border-image: linear-gradient(to bottom, white 95%, #7b7b7b 98%, #000 99%);
     box-shadow: 0 0 6vmin #000000, inset 0 0 9vmin hsl(0, 0%, 100%);
     filter: url(#wavy-nav) blur(1px);
     transition: top 1s ease-in-out;
-}
+} */
 
 .filmburnnavCLR::after {
     position: relative;
     content: "";
     top: -66vmin;
-    left: -26vmin;
+    left: -3vmin;
     right: -54vmin;
-    bottom: 46vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url(#wavy-nav) blur(3px);
+    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    filter: url(#wavy);
     transition: top 1s ease-in-out;
-    transform: translateZ(0);
 }
 
 .filmburnnavshowCLR::after {
     position: relative;
     content: "";
-    top: -53vmin;
-    left: -26vmin;
+    top: -46vmin;
+    left: -3vmin;
     right: -54vmin;
-    bottom: 46vmin;
     border: 69vmin solid;
-    /* Apply gradient border */
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url(#wavy-nav) blur(1px);
+    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    filter: url(#wavy);
     transition: top 1s ease-in-out;
 }
 

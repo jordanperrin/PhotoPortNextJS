@@ -44,9 +44,7 @@ const Navbar = (props) =>{
                         </div>
                     </li>
                 </ul>
-                
-                
-
+            
                 <div className=  { `${dropDown ?  styles.sideactive: styles.side}`}>
                     <ul className= {styles.navulDrop}> 
                         <li>
@@ -69,7 +67,7 @@ const Navbar = (props) =>{
                         </li>
                     </ul>     
                 </div>
-                <div className={styles.filmburnnavUnder}></div>
+                {/* <div className={styles.filmburnnavUnder}></div> */}
                 <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}>
                 </div>
                 
