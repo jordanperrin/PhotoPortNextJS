@@ -1,6 +1,5 @@
 "use client";
 import {useState} from 'react';
-import SvgNav from '@/components/SvgNav';
 import Link from 'next/link';
 import styles from './NavBar.module.css';
 import LandIcon from '@/components/LandIcon';
@@ -72,10 +71,10 @@ const Navbar = (props) =>{
                 </div>
                 
 
-                <div>
-                    <svg className={styles.svgBurn}>
+                <div className={styles.parentSvg}>
+                    <svg>
                     <defs>
-                        <filter id="wavy-nav" xmlns="http://www.w3.org/2000/svg" >
+                        <filter id="wavy" xmlns="http://www.w3.org/2000/svg" >
                         <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2"  width="1000%" height="103%">
                             <animate attributeName="baseFrequency" values="0.02;0.005;0.02" />
                         </feTurbulence>

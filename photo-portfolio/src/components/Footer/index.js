@@ -37,7 +37,7 @@ export default function Footer(props){
           <div className = {styles.burncontainer}>
             <div ref={burnRef} className={` ${ props.isBW ? ( burnDivVisible ? styles['filmburnBW'] : styles["offscreen"] ): (burnDivVisible ? styles['filmburnCLR'] : styles["offscreen"])}`}></div>
             <div className={`${burnDivVisible ? styles['igcontainershow'] : styles['igcontainer']}`}>
-              <ul className={styles.ul}>
+              <ul className={styles.footerUl}>
                 <li>
                   <Link href="https://www.instagram.com/cinema.tif/" className={styles.link}>
                     <IgIcon className={styles.igicon}/>
@@ -47,18 +47,19 @@ export default function Footer(props){
             </div>
           </div>
 
-          <div>
-            <svg className={styles.svg}>
-              <defs>
-                <filter id="wavy" xmlns="http://www.w3.org/2000/svg" >
-                  <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2"  width="1000%" height="103%">
-                    <animate attributeName="baseFrequency" values="0.02;0.005;0.02" />
-                  </feTurbulence>
-                  <feDisplacementMap in="SourceGraphic" scale="25" />
-                </filter>
-              </defs>
-            </svg> 
-          </div>
+          {/* <div className={styles.parentSvg}>
+                    <svg>
+                    <defs>
+                        <filter id="wavy" xmlns="http://www.w3.org/2000/svg" >
+                        <feTurbulence x="0" y="0" baseFrequency="0.109" numOctaves="5" seed="2"  width="1000%" height="103%">
+                            <animate attributeName="baseFrequency" values="0.02;0.005;0.02" />
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" scale="25" />
+                        </filter>
+                    </defs>
+                    </svg> 
+                </div> */}
+          
         </div>
       );
 }

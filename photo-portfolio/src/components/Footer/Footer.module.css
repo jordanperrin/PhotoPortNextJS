@@ -1,6 +1,7 @@
 .container{
     overflow-x: hidden;
     overflow-y: hidden;
+    height: 40vmin;
 }
 
 .burncontainer{
@@ -15,11 +16,11 @@
   }
 
 .filmburn{
-  display: flex;
+  /* display: flex; */
   position: relative;
   height:60vmin;
-  width: 100%;
-  filter: url('#wavy') blur(1px);
+  /* width: 100%; */
+  filter: url('#wavy');
   -webkit-transform: translate3d(0,0,0);
 }
 
@@ -40,11 +41,12 @@
   box-shadow: 0 0 5vmin hsl(40, 100%, 99%), inset 0 0 5vmin hsl(0, 0%, 91%);
   position: absolute;
   animation: slideinbottom 1.5s ;
+  filter: blur(5px);
 }
 
 .filmburnCLR::after{
   content: "";
-  top: 3vh;
+  top: 6vh;
   left: -57vmin;
   right: -54vmin;
   bottom: 46vmin;
@@ -53,52 +55,51 @@
   box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
   position: absolute;
   animation: slideinbottom 1.5s ;
-  filter: url('#wavy') blur(3px);
+  filter: blur(5px);
 }
 
 @keyframes slideinbottom {
     0% {
-      top: 14vh;
+      top: 24vh;
     }
     100% {
-      top: 3vh;
+      top: 6vh;
     }
   }
 
 .igcontainer{
-height:100%;
-width:100%;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-z-index: 2;
-top: 0vh;
-opacity:0;
-transition: opacity 6s ease-in-out; 
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  top: -15vh;
+  opacity:0;
+  transition: opacity 6s ease-in-out; 
 }
 
 .igcontainershow{
-composes: igcontainer;
-opacity: 1;
+  composes: igcontainer;
+  opacity: 1;
 }
 
-/* .svg{
-  width: 100px;
-  height:100px;
-  display: none;
-} */
+.parentSvg{
+  width: 0;
+  height:0;
+}
 
 .igicon{
-display: flex;
-width: 18vw;
-height: 4vh;
-color: rgb(9,9,8);
+  width: 18vw;
+  height: 5vh;
+  color: rgb(9,9,8);
 }
 
 .burncontainer ul{
-display:flex;
-list-style: none;
+  display:inline-block;
+  list-style: none;
+  padding: 0;
 }
 
 .link{

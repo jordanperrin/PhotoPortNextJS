@@ -59,7 +59,6 @@
 }
 
 .nav ul li .a{
-
     text-decoration: none;
     color: #000;
     padding: 0.5rem;
@@ -137,12 +136,6 @@ nav .x{
     color:#fff;
 }
 
-.svgBurn{
-    /* width: 0;
-    height:0; */
-    right:-200%;
-}
-
 /* .filmburnnavBW{
     position: absolute;
     height: 0;
@@ -157,7 +150,7 @@ nav .x{
     position: absolute;
     height: 0;
     width: 0;
-    filter: url(#wavy-nav) blur(9px);
+    filter: url('#wavy') blur(9px);
     z-index: -999;
 }
 
@@ -171,8 +164,13 @@ nav .x{
     border: 51vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url(#wavy-nav) blur(9px);
+    filter: url('#wavy') blur(9px);
     transition: top 1s ease-in-out;
+}
+
+.parentSvg{
+    width: 0;
+    height:0;
 }
 
 .filmburnnavCLR{
@@ -180,7 +178,7 @@ nav .x{
     height: 0;
     width: 0;
     z-index: -999;
-    filter: blur(3px);
+    filter: url('#wavy');
     -webkit-transform: translate3d(0,0,0);
     /* opacity: 90%; */
 }
@@ -188,25 +186,25 @@ nav .x{
     position: relative;
     content: "";
     top: -66vmin;
-    left: -3vmin;
+    left: -5vmin;
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
-    filter: url(#wavy-nav);
+    filter: blur(4px);
     transition: top 1s ease-in-out;
 }
 
 .filmburnnavshowCLR::after {
     position: relative;
     content: "";
-    top: -46vmin;
-    left: -3vmin;
+    top: -52vmin;
+    left: -5vmin;
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
     box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
-    filter: url(#wavy-nav);
+    filter: blur(4px);
     transition: top 1s ease-in-out;
 }
 
