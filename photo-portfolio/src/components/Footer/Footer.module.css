@@ -33,15 +33,16 @@
 
 .filmburnBW::after{
   content: "";
-  top: 3vh;
+  top: 6vh;
   left: -57vmin;
   right: -54vmin;
   bottom: 46vmin;
-  border: 13vmin solid hsl(0, 0%, 100%);
-  box-shadow: 0 0 5vmin hsl(40, 100%, 99%), inset 0 0 5vmin hsl(0, 0%, 91%);
+  border: 17vmin solid ;
+  border-image: linear-gradient(to top, white 95%, orange 98%, #af3a94 99%) 35;
+  box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
   position: absolute;
   animation: slideinbottom 1.5s ;
-  filter: blur(5px);
+  filter: blur(5px) grayscale();
 }
 
 .filmburnCLR::after{
@@ -71,9 +72,10 @@
   height:100%;
   width:100%;
   position: absolute;
+  margin:0 auto;
   /* z-index: 2; */
-  left: 43%;
-  top: 40%;
+  left: 42%;
+  top: 45%;
   opacity:0;
   transition: opacity 6s ease-in-out; 
 }

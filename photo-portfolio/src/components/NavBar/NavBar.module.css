@@ -17,7 +17,7 @@
     padding: 0;
     width: -moz-available; /*needs to be second for firefox to recognize it*/
     top: 0.32vh;
-    left: -10px;
+    left: -12px;
     right: -10px;
 }
 
@@ -136,15 +136,28 @@ nav .x{
     color:#fff;
 }
 
-/* .filmburnnavBW{
+.filmburnnavCLR{
     position: absolute;
     height: 0;
     width: 0;
     z-index: -999;
-    transform: translate3d(-10px,0,0);
-    filter: url(#wavy-nav) blur(1px);
-    opacity: 90%;
-} */
+    filter: url('#wavy');
+    -webkit-transform: translate3d(0,0,0);
+    /* opacity: 90%; */
+}
+
+.filmburnnavBW{
+    composes:filmburnnavCLR;
+}
+
+.filmburnnavshowCLR {
+    composes: filmburnnavCLR;
+} 
+
+.filmburnnavshowBW {
+    composes: filmburnnavCLR;
+}
+
 
 .filmburnnavUnder{
     position: absolute;
@@ -173,15 +186,6 @@ nav .x{
     height:0;
 }
 
-.filmburnnavCLR{
-    position: absolute;
-    height: 0;
-    width: 0;
-    z-index: -999;
-    filter: url('#wavy');
-    -webkit-transform: translate3d(0,0,0);
-    /* opacity: 90%; */
-}
 .filmburnnavCLR::after {
     position: relative;
     content: "";
@@ -208,40 +212,32 @@ nav .x{
     transition: top 1s ease-in-out;
 }
 
-/* .filmburnnavshowBW {
-    composes: filmburnnavBW;
-}*/
-.filmburnnavshowCLR {
-    composes: filmburnnavCLR;
-} 
-/*   
+  
 .filmburnnavBW::after {
-    position: relative;
+   position: relative;
     content: "";
     top: -66vmin;
-    left: -26vmin;
+    left: -5vmin;
     right: -54vmin;
-    bottom: 46vmin;
     border: 69vmin solid;
-    border-image: linear-gradient(to bottom, white 95%, #7b7b7b 98%, #000 99%);
-    box-shadow: 0 0 6vmin #4e4e4b, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url(#wavy-nav) blur(1px);
+    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    filter: blur(4px) grayscale();
     transition: top 1s ease-in-out;
 }
 
 .filmburnnavshowBW::after {
     position: relative;
     content: "";
-    top: -53vmin;
-    left: -26vmin;
+    top: -52vmin;
+    left: -5vmin;
     right: -54vmin;
-    bottom: 46vmin;
     border: 69vmin solid;
-    border-image: linear-gradient(to bottom, white 95%, #7b7b7b 98%, #000 99%);
-    box-shadow: 0 0 6vmin #000000, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url(#wavy-nav) blur(1px);
+    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    filter: blur(4px) grayscale();
     transition: top 1s ease-in-out;
-} */
+}
 
 
 
