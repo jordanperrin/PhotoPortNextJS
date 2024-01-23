@@ -1,5 +1,5 @@
 "use client";
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import styles from './Land.module.css';
 import Image from 'next/image'
 //TODO: need to change the way we import these images -> use an 
@@ -25,6 +25,7 @@ export default function Land(props){
       const [perfCount, setPerfCount] = useState(20);
       const [initialRendered, setInitialinitialRendered] = useState(false);
       const [windowSize, setWindowSize] = useState(320);
+      const imgRef = useRef();
 
 
       useEffect(() => {
@@ -38,6 +39,19 @@ export default function Land(props){
           window.removeEventListener('resize', handleWindowResize);
         };
       }, []);
+
+      useEffect(() =>{
+        const observer = new IntersectionObserver((entries)=>{
+          const entry = entries[0];
+          if(entry.isIntersecting){
+            const img = entry.target;
+            const src = img.getAttribute('data');
+
+            img.setAttribute(src, 'src');
+
+          }
+        }
+      , []);
 
       let sqrColor;
       let vw = 0;
@@ -117,6 +131,7 @@ export default function Land(props){
            }else if(windowSize >= 1024 && windowSize ){
             setPerfCount(52);
            }
+           console.log('OH SHIT');
         }, [windowSize]);
       
       useEffect(()=>{
@@ -158,12 +173,32 @@ export default function Land(props){
                   <Image src={img4} placeholder='blur'/>
                   <div className={styles.block}></div>
                 </div>
-                <div className={styles.insideimg}>
+                <div ref={imgRef} className={styles.insideimg}>
                   <Image src={img1} placeholder='blur'/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
                   <Image src={img1} placeholder='blur'/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image src={img1} placeholder='blur'/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'}/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>

@@ -30,7 +30,7 @@ export default function Footer(props){
     
         return () => clearTimeout(delayTimeout);
       }, []);//empty array as a dependency will only run once when component is initialized
-      burnDivVisible
+  
 
       return (
         <div className={styles.container}>
