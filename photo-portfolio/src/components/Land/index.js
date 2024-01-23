@@ -128,6 +128,9 @@ export default function Land(props){
         setInitialinitialRendered(true);
       }
         
+      const myLoader=({src})=>{
+        return `https://photo-port.s3.amazonaws.com/post1-7.jpg`;
+      }
 
       return (
         
@@ -140,11 +143,11 @@ export default function Land(props){
             </div>
             <div className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
-                  <Image priority src={img1} placeholder='blur'/>
+                  <Image priority loader={myLoader} src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img2} placeholder='blur'/>
+                  <Image priority loader={myLoader} src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
