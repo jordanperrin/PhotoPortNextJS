@@ -40,18 +40,22 @@ export default function Land(props){
         };
       }, []);
 
-      useEffect(() =>{
-        const observer = new IntersectionObserver((entries)=>{
-          const entry = entries[0];
-          if(entry.isIntersecting){
-            const img = entry.target;
-            const src = img.getAttribute('data');
+      // useEffect(() =>{
+      //   const observer = new IntersectionObserver((entries)=>{
+      //     const entry = entries[0];
+      //     if(entry.isIntersecting){
+      //       const img = entry.target;
+      //       const src = img.getAttribute('data');
 
-            img.setAttribute(src, 'src');
+      //       img.setAttribute(src, 'src');
 
-          }
-        }
-      , []);
+          // return () => {
+          //   observer.disconnect();
+          // };
+
+      //     }
+      //   }
+      // , []);
 
       let sqrColor;
       let vw = 0;
@@ -158,47 +162,47 @@ export default function Land(props){
             </div>
             <div className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
-                  <Image priority loader={myLoader} src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
+                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority loader={myLoader} src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image priority src={img3} placeholder='blur'/>
+                  <Image loading='lazy' src={img2} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image src={img4} placeholder='blur'/>
+                  <img src={img3} alt = ""/>
                   <div className={styles.block}></div>
                 </div>
                 <div ref={imgRef} className={styles.insideimg}>
-                  <Image src={img1} placeholder='blur'/>
+                  <img loading='lazy'  src={img1} width={300} height={200}/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image src={img1} placeholder='blur'/>
+                  <img loading='lazy' src={img1} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image src={img1} placeholder='blur'/>
+                  <img loading='lazy'  src={img1} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'}/>
+                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
+                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
+                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image data={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} />
+                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>
