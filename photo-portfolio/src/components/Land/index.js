@@ -30,11 +30,12 @@ export default function Land(props){
 
       useEffect(() => {
         const handleWindowResize = () => {
-          setWindowSize(window.innerWidth);
+          setWindowSize(window.innerHeight);
         };
-        setWindowSize(window.innerWidth);
+        setWindowSize(window.innerHeight);
         window.addEventListener('resize', handleWindowResize);
-    
+        
+        
         return () => {
           window.removeEventListener('resize', handleWindowResize);
         };
@@ -64,7 +65,7 @@ export default function Land(props){
           for (let i = 0; i < count; i++) {
             let string = sqrColor + getRandomNumber();
             listOfPerfs.push(
-              <div className={`${styles.sqaure} ${styles[string]}`}>
+              <div id='square-ref' className={`${styles.sqaure} ${styles[string]}`}>
                 <span className={styles.invisible}> Placeholder</span>
               </div>
             );
@@ -74,10 +75,18 @@ export default function Land(props){
       }
 
       //runs when screen width is chanegd
+
+      //TODO -> REFACTOR CLEAN UP
       useEffect(() => {
-        console.log("Window size: " + windowSize + "\n")
-        console.log("Perf count:  " + Math.floor(windowSize/2));
-        setPerfCount(Math.floor(windowSize/4));
+        let img_container = document.getElementById('img-contain');
+        let square_perf = document.getElementById('square-ref');
+        const style1 = getComputedStyle(img_container);
+        const style2 = getComputedStyle(square_perf);
+        let imgConSize = parseInt(img_container.clientHeight) + (parseInt(getComputedStyle(img_container).padding))*4;
+        let squareSize = 2+parseInt(square_perf.clientHeight )+ parseInt(getComputedStyle(square_perf).marginBottom) + parseInt(getComputedStyle(square_perf).marginTop);
+        console.log("\nImage: "+ imgConSize);
+        console.log("\nSquare: " + squareSize);
+        setPerfCount(Math.ceil(imgConSize/squareSize));
   
         }, [windowSize]);
       
@@ -99,7 +108,7 @@ export default function Land(props){
                 {leftPerfs.length > 0 && leftPerfs}
               </div>
             </div>
-            <div className={styles.imgContainer}>
+            <div id='img-contain' className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
                   <Image src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={1200} height={800} alt=""/>
                   <div className={styles.block}></div>
