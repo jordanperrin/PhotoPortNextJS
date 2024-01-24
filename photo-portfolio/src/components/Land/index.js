@@ -22,7 +22,7 @@ const getRandomNumber = ()=>{
 export default function Land(props){
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
-      const [perfCount, setPerfCount] = useState(20);
+      const [perfCount, setPerfCount] = useState(46);
       const [initialRendered, setInitialinitialRendered] = useState(false);
       const [windowSize, setWindowSize] = useState(320);
       const imgRef = useRef();
@@ -39,23 +39,6 @@ export default function Land(props){
           window.removeEventListener('resize', handleWindowResize);
         };
       }, []);
-
-      // useEffect(() =>{
-      //   const observer = new IntersectionObserver((entries)=>{
-      //     const entry = entries[0];
-      //     if(entry.isIntersecting){
-      //       const img = entry.target;
-      //       const src = img.getAttribute('data');
-
-      //       img.setAttribute(src, 'src');
-
-          // return () => {
-          //   observer.disconnect();
-          // };
-
-      //     }
-      //   }
-      // , []);
 
       let sqrColor;
       let vw = 0;
@@ -92,50 +75,10 @@ export default function Land(props){
 
       //runs when screen width is chanegd
       useEffect(() => {
-          if(windowSize >= 335 && windowSize < 342){
-            setPerfCount(21);
-          }else if(windowSize >= 342 && windowSize < 365){
-            setPerfCount(22)
-          }else if (windowSize >= 365 && windowSize < 382 ){
-            setPerfCount(24);
-          }else if (windowSize >= 382 && windowSize< 408){
-            setPerfCount(26);
-           }else if(windowSize >= 408 && windowSize <434){
-            setPerfCount(28);
-           }else if(windowSize >= 434 && windowSize < 460 ){
-            setPerfCount(30);
-           }else if(windowSize >= 460 && windowSize < 487){
-            setPerfCount(32);
-           }else if(windowSize >= 487 && windowSize < 515){
-            setPerfCount(34);
-           }else if(windowSize >= 515 && windowSize < 538){
-            setPerfCount(36);
-           }else if(windowSize >= 538 && windowSize < 566){
-            setPerfCount(38);
-           }else if(windowSize >= 566 && windowSize < 590){
-            setPerfCount(40);
-           }else if(windowSize >= 590 && windowSize < 617){
-            setPerfCount(42);
-           }else if(windowSize >= 617 && windowSize < 643){
-            setPerfCount(44);
-           }else if(windowSize >= 643 && windowSize < 670){
-            setPerfCount(46);
-           }else if(windowSize >= 670 && windowSize < 695){
-            setPerfCount(48);
-           }else if(windowSize >= 695 && windowSize < 721){
-            setPerfCount(50);
-           }else if(windowSize >= 721 && windowSize < 747){
-            setPerfCount(52);
-           }else if(windowSize >= 747 && windowSize < 758){
-            setPerfCount(44);
-           }else if(windowSize >= 758 && windowSize < 786){
-            setPerfCount(46);
-           }else if(windowSize >= 820 && windowSize < 840){
-            setPerfCount(48);
-           }else if(windowSize >= 1024 && windowSize ){
-            setPerfCount(52);
-           }
-           console.log('OH SHIT');
+        console.log("Window size: " + windowSize + "\n")
+        console.log("Perf count:  " + Math.floor(windowSize/2));
+        setPerfCount(Math.floor(windowSize/4));
+  
         }, [windowSize]);
       
       useEffect(()=>{
@@ -145,10 +88,6 @@ export default function Land(props){
       if(!initialRendered){
         generatePerfs(perfCount);
         setInitialinitialRendered(true);
-      }
-        
-      const myLoader=({src})=>{
-        return `https://photo-port.s3.amazonaws.com/post1-7.jpg`;
       }
 
       return (
@@ -162,47 +101,63 @@ export default function Land(props){
             </div>
             <div className={styles.imgContainer}>
                 <div className={styles.insideimg} id="first-img">
-                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'}/>
+                  <Image src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={1200} height={800} alt=""/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                <Image src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={1200} height={800} alt=""/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} />
+                  <Image loading='lazy' src={img2} alt=""/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img src={img3} alt = ""/>
+                  <Image src={img3} alt = ""/>
                   <div className={styles.block}></div>
                 </div>
                 <div ref={imgRef} className={styles.insideimg}>
-                  <img loading='lazy'  src={img1} width={300} height={200}/>
+                  <Image loading='lazy'  src={img1} width={300} height={200}/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy' src={img1} width={300} height={200}/>
+                  <Image loading='lazy' src={img1} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy'  src={img1} width={300} height={200}/>
+                  <Image loading='lazy'  src={img1} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                  <Image loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
+                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
                   <div className={styles.block}></div>
                 </div>
                 <div className={styles.insideimg}>
-                  <img loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image loading='lazy' src={img2} alt=""/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image loading='lazy' src={img2} alt=""/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image loading='lazy' src={img2} alt=""/>
+                  <div className={styles.block}></div>
+                </div>
+                <div className={styles.insideimg}>
+                  <Image loading='lazy' src={img2} alt=""/>
                   <div className={styles.block}></div>
                 </div>
               <div className={styles.insideimg}>

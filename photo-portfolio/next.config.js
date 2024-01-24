@@ -2,6 +2,16 @@
 const nextConfig = {}
 
 module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'photo-port.s3.amazonaws.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
+  },
   compiler: {
     styledComponents: true
   },
