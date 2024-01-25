@@ -22,33 +22,37 @@ const getRandomNumber = ()=>{
 export default function Land(props){
       const [leftPerfs, setleftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
-      const [perfCount, setPerfCount] = useState(46);
       const [initialRendered, setInitialinitialRendered] = useState(false);
-      const [windowSize, setWindowSize] = useState(320);
-      const imgRef = useRef();
-
+      const [windowSize, setWindowSize] = useState(600);
 
       useEffect(() => {
         const handleWindowResize = () => {
-          setWindowSize(window.innerHeight);
+          let screenW = window.innerWidth;
+          let product = window.innerHeight * window.innerWidth;
+          //need this check otherwise scrollbar on mobile triggers new height 
+          if(window.innerWidth != screenW){
+            setWindowSize(product);
+          }
         };
-        setWindowSize(window.innerHeight);
         window.addEventListener('resize', handleWindowResize);
-        
         
         return () => {
           window.removeEventListener('resize', handleWindowResize);
         };
       }, []);
 
-      let sqrColor;
-      let vw = 0;
-
-      if(props.isBW){
-         sqrColor = "bwsquare";
-      }else{
-        sqrColor = "clrsquare";
-      }
+      useEffect(() => {
+        let img_container = document.getElementById('img-contain');
+        let square_perf = document.getElementById('square-ref');
+        const style1 = getComputedStyle(img_container);
+        const style2 = getComputedStyle(square_perf);
+        let imgConSize = parseInt(img_container.clientHeight) + (parseInt(getComputedStyle(img_container).padding));
+        let squareSize = 2+parseInt(square_perf.clientHeight )+ parseInt(getComputedStyle(square_perf).marginBottom) + parseInt(getComputedStyle(square_perf).marginTop);
+        console.log("\nImage: "+ imgConSize);
+        console.log("\nSquare: " + squareSize);
+        generatePerfs(Math.ceil(imgConSize/squareSize));
+  
+        }, [windowSize]);
 
       const generatePerfs = (count) => {
           let listOfPerfs=[];
@@ -77,25 +81,17 @@ export default function Land(props){
       //runs when screen width is chanegd
 
       //TODO -> REFACTOR CLEAN UP
-      useEffect(() => {
-        let img_container = document.getElementById('img-contain');
-        let square_perf = document.getElementById('square-ref');
-        const style1 = getComputedStyle(img_container);
-        const style2 = getComputedStyle(square_perf);
-        let imgConSize = parseInt(img_container.clientHeight) + (parseInt(getComputedStyle(img_container).padding))*4;
-        let squareSize = 2+parseInt(square_perf.clientHeight )+ parseInt(getComputedStyle(square_perf).marginBottom) + parseInt(getComputedStyle(square_perf).marginTop);
-        console.log("\nImage: "+ imgConSize);
-        console.log("\nSquare: " + squareSize);
-        setPerfCount(Math.ceil(imgConSize/squareSize));
-  
-        }, [windowSize]);
-      
-      useEffect(()=>{
-        generatePerfs(perfCount);
-      }, [perfCount])
+        
+        
+        let sqrColor;
+        if(props.isBW){
+           sqrColor = "bwsquare";
+        }else{
+          sqrColor = "clrsquare";
+        }
 
       if(!initialRendered){
-        generatePerfs(perfCount);
+        generatePerfs(21);
         setInitialinitialRendered(true);
       }
 
@@ -125,7 +121,7 @@ export default function Land(props){
                   <Image src={img3} alt = ""/>
                   <div className={styles.block}></div>
                 </div>
-                <div ref={imgRef} className={styles.insideimg}>
+                <div className={styles.insideimg}>
                   <Image loading='lazy'  src={img1} width={300} height={200}/>
                   <div className={styles.block} id='messed-up-block'></div>
                 </div>
