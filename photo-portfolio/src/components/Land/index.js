@@ -1,36 +1,29 @@
 "use client";
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
+import {getRandomNumber, calculateSizes, generatePerfs, generateImages} from '../../helpers/utils';
 import styles from './Land.module.css';
 import Image from 'next/image'
-//TODO: need to change the way we import these images -> use an 
-import img1 from '../../../public/post1-7.jpg';
-import img2 from '../../../public/post1-4.jpg';
-import img3 from '../../../public/post1-2.jpg';
-import img4 from '../../../public/post2-8.jpg';
-import img5 from '../../../public/post2-10.jpg';
 
-let prevVal;
-const getRandomNumber = ()=>{
-  let newVal =  Math.floor(Math.random() * 16) + 1;
-  while(newVal === prevVal ){
-    newVal =  Math.floor(Math.random() * 16) + 1;
-  }
-  return newVal;
-
-}
 
 export default function Land(props){
-      const [leftPerfs, setleftPerfs] = useState([]);
+      const [leftPerfs, setLeftPerfs] = useState([]);
       const [rightPerfs, setRightPerfs] = useState([]);
+      const [imgListTag, setListImgTag] = useState([]);
       const [initialRendered, setInitialinitialRendered] = useState(false);
       const [windowSize, setWindowSize] = useState(600);
 
+      let sqrColor;
+        if(props.isBW){
+           sqrColor = "bwsquare";
+        }else{
+          sqrColor = "clrsquare";
+        }
+
       useEffect(() => {
         const handleWindowResize = () => {
-          let screenW = window.innerWidth;
-          let product = window.innerHeight * window.innerWidth;
-          //need this check otherwise scrollbar on mobile triggers new height 
-          if(window.innerWidth != screenW){
+          const { imgConSize, squareSize } = calculateSizes();
+          let product = imgConSize * squareSize;
+          if(product != windowSize){
             setWindowSize(product);
           }
         };
@@ -42,56 +35,14 @@ export default function Land(props){
       }, []);
 
       useEffect(() => {
-        let img_container = document.getElementById('img-contain');
-        let square_perf = document.getElementById('square-ref');
-        const style1 = getComputedStyle(img_container);
-        const style2 = getComputedStyle(square_perf);
-        let imgConSize = parseInt(img_container.clientHeight) + (parseInt(getComputedStyle(img_container).padding));
-        let squareSize = 2+parseInt(square_perf.clientHeight )+ parseInt(getComputedStyle(square_perf).marginBottom) + parseInt(getComputedStyle(square_perf).marginTop);
-        console.log("\nImage: "+ imgConSize);
-        console.log("\nSquare: " + squareSize);
-        generatePerfs(Math.ceil(imgConSize/squareSize));
-  
+        const { imgConSize, squareSize } = calculateSizes();
+        generatePerfs(Math.ceil(imgConSize/squareSize), sqrColor, styles, getRandomNumber, setLeftPerfs, setRightPerfs);
         }, [windowSize]);
 
-      const generatePerfs = (count) => {
-          let listOfPerfs=[];
-          for (let i = 0; i < count; i++) {
-            let string = sqrColor + getRandomNumber();
-            listOfPerfs.push(
-              <div className={`${styles.sqaure} ${styles[string]}`}>
-                <span className={styles.invisible}> Placeholder</span>
-              </div>
-            );
-          }
-          setleftPerfs(listOfPerfs);
-          listOfPerfs=[];
-          for (let i = 0; i < count; i++) {
-            let string = sqrColor + getRandomNumber();
-            listOfPerfs.push(
-              <div id='square-ref' className={`${styles.sqaure} ${styles[string]}`}>
-                <span className={styles.invisible}> Placeholder</span>
-              </div>
-            );
-          
-          setRightPerfs(listOfPerfs);
-        }
-      }
-
-      //runs when screen width is chanegd
-
-      //TODO -> REFACTOR CLEAN UP
-        
-        
-        let sqrColor;
-        if(props.isBW){
-           sqrColor = "bwsquare";
-        }else{
-          sqrColor = "clrsquare";
-        }
 
       if(!initialRendered){
-        generatePerfs(21);
+        generatePerfs(31, sqrColor, styles, getRandomNumber, setLeftPerfs, setRightPerfs);
+        generateImages(15, styles, setListImgTag, 'https://photo-port.s3.amazonaws.com/post1-7.jpg');
         setInitialinitialRendered(true);
       }
 
@@ -105,66 +56,7 @@ export default function Land(props){
               </div>
             </div>
             <div id='img-contain' className={styles.imgContainer}>
-                <div className={styles.insideimg} id="first-img">
-                  <Image src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={1200} height={800} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                <Image src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={1200} height={800} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image src={img3} alt = ""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy'  src={img1} width={300} height={200}/>
-                  <div className={styles.block} id='messed-up-block'></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img1} width={300} height={200}/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy'  src={img1} width={300} height={200}/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200} />
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy'  src={'https://photo-port.s3.amazonaws.com/post1-7.jpg'} width={300} height={200}/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
-                <div className={styles.insideimg}>
-                  <Image loading='lazy' src={img2} alt=""/>
-                  <div className={styles.block}></div>
-                </div>
+                {imgListTag}
               <div className={styles.insideimg}>
               </div>
             </div>
