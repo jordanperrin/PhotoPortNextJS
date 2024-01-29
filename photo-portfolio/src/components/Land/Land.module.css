@@ -1,118 +1,4 @@
 
-.bwsquare1{
- 
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(20deg, #32322e, #9e9e9c, #eeefec, #272827 ,#333332, #333332) border-box;
-              /*we need to apply it to border-box bc we're gonna use the borders to remove the edges of the black padding-box*/
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare2{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(40deg, #333332, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare3{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(120deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare4{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(39deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare5{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(78deg, #4e4e4b, #656563, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare6{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(5deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare7{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(15deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare8{
-   
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(203deg, #4e4e4b, #444441, #eeefec,#363735, #272827, #363735 , #e1e1df ) border-box;
-  border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare9{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(210deg, #32322e, #454540, #eeefec, #272827 ,#333332) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare10{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(240deg, #32322e, #767671, #eeefec, #272827 ,#333332, #7f817f, #363735 , #8a8a8a) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare11{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(120deg, #32322e, #767671, #8c8c8c, #272827 ,#333332, #7f817f, #363735 , #acacac) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare12{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(120deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare13{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(20deg, #32322e, #767671, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare14{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(80deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare15{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(60deg, #32322e, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
-    border-width: 1px 1px 1px 1px;
-}
-
-.bwsquare16{
-   
-  background: linear-gradient(black, black) padding-box,
-              linear-gradient(10deg, #666662, #424241, #272727, #272827 ,#e3e3e1, #313131, #7b7b7b , #343434) border-box;
-   border-width: 1px 1px 1px 1px;
-}
-
 .clrsquare1{
   background: linear-gradient(black, black) padding-box, linear-gradient(20deg, #32322e, #573b2c, #c2724b, #272827 ,#6e5649, #333332) border-box;
               /*we need to apply it to border-box bc we're gonna use the borders to remove the edges of the black padding-box*/
@@ -229,12 +115,15 @@
 
 .block {
   width: 100%;
-  height: 98%;
+  height: 100%;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
   top: 0;
-  box-shadow: inset 0px 0px 2px 2px rgb(9, 9, 8);
+  box-shadow: inset 5px 0 2px 2px rgb(9, 9, 8),    /* Adjust the top shadow */
+  inset 0 -5px 2px 2px rgb(9, 9, 8),   /* Adjust the bottom shadow */
+  inset -5px 0 2px 2px rgb(9, 9, 8),   /* Adjust the left shadow */
+  inset 0 5px 2px 2px rgb(9, 9, 8);    /* Adjust the right shadow */
 }
 
 .imgContainer{

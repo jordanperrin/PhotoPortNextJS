@@ -42,7 +42,7 @@ export default function Land(props){
 
       if(!initialRendered){
         generatePerfs(31, sqrColor, styles, getRandomNumber, setLeftPerfs, setRightPerfs);
-        generateImages(15, styles, setListImgTag, 'https://photo-port.s3.amazonaws.com/post1-7.jpg');
+        generateImages(15, styles, setListImgTag, 'https://photo-port.s3.amazonaws.com/post1-7.jpg', true);
         setInitialinitialRendered(true);
       }
 
