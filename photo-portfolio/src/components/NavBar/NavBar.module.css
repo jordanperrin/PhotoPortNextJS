@@ -158,29 +158,6 @@ nav .x{
     composes: filmburnnavCLR;
 }
 
-
-.filmburnnavUnder{
-    position: absolute;
-    height: 0;
-    width: 0;
-    filter: url('#wavy') blur(9px);
-    z-index: -999;
-}
-
-.filmburnnavUnder::after{
-    position: relative;
-    content: "";
-    top: -36vmin;
-    left: -4vmin;
-    right: -54vmin;
-    bottom: 46vmin;
-    border: 51vmin solid;
-    border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0 0 6vmin #f7b7e8, inset 0 0 9vmin hsl(0, 0%, 100%);
-    filter: url('#wavy') blur(9px);
-    transition: top 1s ease-in-out;
-}
-
 .parentSvg{
     width: 0;
     height:0;
@@ -194,7 +171,7 @@ nav .x{
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    box-shadow: 0vmin 0vmin 9vmin 0vmin rgba(110,157,198,1);
     filter: blur(4px);
     transition: top 1s ease-in-out;
 }
@@ -207,7 +184,7 @@ nav .x{
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    box-shadow: 0vmin 0vmin 9vmin 0vmin rgba(110,157,198,1);
     filter: blur(4px);
     transition: top 1s ease-in-out;
 }
@@ -221,7 +198,7 @@ nav .x{
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    box-shadow: 0vmin 0vmin 9vmin 0vmin rgba(110,157,198,1);
     filter: blur(4px) grayscale();
     transition: top 1s ease-in-out;
 }
@@ -234,12 +211,101 @@ nav .x{
     right: -54vmin;
     border: 69vmin solid;
     border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
-    box-shadow: 0vmin -1vmin 7vmin 2.5vmin rgba(110,157,198,1);
+    box-shadow: 0vmin 0vmin 9vmin 0vmin rgba(110,157,198,1);
     filter: blur(4px) grayscale();
     transition: top 1s ease-in-out;
 }
 
+.burnParent{
+    display: contents;
+}
 
+
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    .nav{
+        top:3vh;
+    }
+
+    .burnParent{
+        display: flex;
+        position: absolute;
+    }
+
+    .side{
+        top: -230%;
+    }
+
+    .dropitem1{
+        font-size: 1.8vw;
+    }
+
+    .sideactive{
+        top:110%;
+    }
+
+    .filmburnnavCLR::after{
+        top: -109vmin;
+        left: 154vmin;
+        border: 113vmin solid;
+        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
+        box-shadow: 0vmin 2vmin 0vmin 0vmin rgba(110,157,198,1);
+        transition: border 1s ease-in-out;
+    }
+
+    .filmburnnavshowCLR::after {
+        top: -109vmin;
+        left: 154vmin;
+        border: 120vmin solid;
+        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
+        box-shadow: 0vmin 2vmin 0vmin 0vmin rgba(110,157,198,1);
+        /* filter: blur(9PX); */
+        transition: border 1s ease-in-out;
+    }
+
+    .filmburnnavshowCLR2::after{
+        position: relative;
+        content: "";
+        top: -67vmin;
+        left: -1vmin;
+        border: 79vmin solid;
+        border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+        box-shadow: 0vmin 2vmin 0vmin 0vmin rgba(110,157,198,1);
+        filter: blur(4px);
+        transition: top 1s ease-in-out;
+    }
+
+    .filmburnnavCLR2{
+        position: absolute;
+        height: 0;
+        width: 0;
+        z-index: -999;
+        filter: url('#wavy');
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+    .filmburnnavCLR2::after{
+        position: relative;
+        content: "";
+        top: -75vmin;
+        left: -1vmin;
+        border: 79vmin solid;
+        border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
+        box-shadow: 0vmin 2vmin 0vmin 0vmin rgba(110,157,198,1);
+        filter: blur(4px);
+        transition: top 1s ease-in-out;
+    }
+
+    .filmburnnavshowCLR2{
+        position: absolute;
+        height: 0;
+        width: 0;
+        z-index: -999;
+        filter: url('#wavy');
+        -webkit-transform: translate3d(0,0,0);
+    }
+    
+}
 
 /* @media (min-width: 390px){
     .navul{
