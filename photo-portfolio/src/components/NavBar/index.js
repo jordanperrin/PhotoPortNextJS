@@ -74,7 +74,7 @@ const Navbar = (props) =>{
                 <div className={styles.burnParent}>
                     <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR : styles.filmburnnavCLR)}`}>
                     </div>
-                    <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW : styles.filmburnnavBW ): (dropDown ? styles.filmburnnavshowCLR2: styles.filmburnnavCLR2)}`}>
+                    <div className={`${props.isBW ?  (dropDown ? styles.filmburnnavshowBW2 : styles.filmburnnavBW2 ): (dropDown ? styles.filmburnnavshowCLR2: styles.filmburnnavCLR2)}`}>
                     </div>
                 </div>
                 
