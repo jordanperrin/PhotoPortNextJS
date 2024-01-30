@@ -148,6 +148,7 @@ nav .x{
 
 .filmburnnavBW{
     composes:filmburnnavCLR;
+    filter: url('#wavy') grayscale();
 }
 
 .filmburnnavshowCLR {
@@ -156,6 +157,7 @@ nav .x{
 
 .filmburnnavshowBW {
     composes: filmburnnavCLR;
+    filter: url('#wavy') grayscale();
 }
 
 .parentSvg{
@@ -233,7 +235,7 @@ nav .x{
     }
 
     .side{
-        top: -230%;
+        top: -200vh;
     }
 
     .dropitem1{
@@ -245,53 +247,55 @@ nav .x{
     }
 
     .filmburnnavCLR::after{
-        top: -109vmin;
+        top: -154vmin;
         left: 154vmin;
-        border: 113vmin solid;
-        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
+        border: 159vmin solid;
+        border-image: linear-gradient(to bottom, white 98%, orange 98%, #af3a94 100%);
         box-shadow: 0vmin 1vmin 0vmin 0vmin rgba(110,157,198,1);
         filter: blur(5px);
-        transition: border 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
 
     .filmburnnavBW::after{
-        top: -109vmin;
+        top: -154vmin;
         left: 154vmin;
-        border: 113vmin solid;
-        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
-        box-shadow: 0 0 0 0 rgba(110,157,198,1);
-        transition: border 1s ease-in-out;
+        border: 159vmin solid;
+        border-image: linear-gradient(to bottom, white 98%, orange 98%, #af3a94 100%);
+        box-shadow: 0vmin 0vmin 0vmin 0vmin rgba(110,157,198,1);
+        transition: top 0.5s ease-in-out;
+        filter: blur(4px);
     }
 
     .filmburnnavshowCLR::after {
-        top: -109vmin;
+        top: -147vmin;
         left: 154vmin;
-        border: 120vmin solid;
-        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
+        border: 159vmin solid;
+        border-image: linear-gradient(to bottom, white 98%, orange 98%, #af3a94 100%);
         box-shadow: 0vmin 1vmin 0vmin 0vmin rgba(110,157,198,1);
         filter: blur(5px);
-        transition: border 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
 
     .filmburnnavshowBW::after {
-        top: -109vmin;
+        top: -147vmin;
         left: 154vmin;
-        border: 120vmin solid;
-        border-image: linear-gradient(to bottom, white 97%, orange 98%, #af3a94 100%);
-        box-shadow: 0 0 0 0 rgba(110,157,198,1);
-        transition: border 1s ease-in-out;
+        border: 159vmin solid;
+        border-image: linear-gradient(to bottom, white 98%, orange 98%, #af3a94 100%);
+        box-shadow: 0vmin 0vmin 0vmin 0vmin rgba(110,157,198,1);
+        filter: blur(4px);
+        transition: top 0.5s ease-in-out;
     }
 
     .filmburnnavshowCLR2::after{
         position: relative;
-        content: "";
+        content:"";
         top: -67vmin;
         left: -1vmin;
         border: 79vmin solid;
         border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
         box-shadow: 0vmin 1vmin 0vmin 0vmin rgba(110,157,198,1);
         filter: blur(5px);
-        transition: top 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
     .filmburnnavshowBW2::after{
         position: relative;
@@ -301,7 +305,7 @@ nav .x{
         border: 79vmin solid;
         border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
         filter: blur(4px);
-        transition: top 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
 
     .filmburnnavCLR2{
@@ -331,7 +335,7 @@ nav .x{
         border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
         box-shadow: 0vmin 1vmin 0vmin 0vmin rgba(110,157,198,1);
         filter: blur(5px);
-        transition: top 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
     .filmburnnavBW2::after{
         position: relative;
@@ -341,7 +345,7 @@ nav .x{
         border: 79vmin solid;
         border-image: linear-gradient(to bottom, white 95%, orange 98%, #af3a94 99%);
         filter: blur(4px);
-        transition: top 1s ease-in-out;
+        transition: top 0.5s ease-in-out;
     }
 
     .filmburnnavshowCLR2{

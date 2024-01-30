@@ -120,10 +120,10 @@
   position: absolute;
   bottom: 0;
   top: 0;
-  box-shadow: inset 5px 0 2px 2px rgb(9, 9, 8),    /* Adjust the top shadow */
-  inset 0 -5px 2px 2px rgb(9, 9, 8),   /* Adjust the bottom shadow */
-  inset -5px 0 2px 2px rgb(9, 9, 8),   /* Adjust the left shadow */
-  inset 0 5px 2px 2px rgb(9, 9, 8);    /* Adjust the right shadow */
+  box-shadow: inset 1px 0 2px 1px rgb(9, 9, 8),    /* Adjust the top shadow */
+  inset 0 -3px 2px 2px rgb(9, 9, 8),   /* Adjust the bottom shadow */
+  inset -1px 0 2px 1px rgb(9, 9, 8),   /* Adjust the left shadow */
+  inset 0 1px 2px 1px rgb(9, 9, 8);    /* Adjust the right shadow */
 }
 
 .imgContainer{
