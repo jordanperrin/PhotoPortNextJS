@@ -1,7 +1,7 @@
 .container{
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 40vmin;
+    height: 31vmin;
 }
 
 .burncontainer{
@@ -29,6 +29,7 @@
 }
 .filmburnCLR{
   composes: filmburn;
+
 }
 
 .filmburnBW::after{
@@ -74,7 +75,7 @@
   position: absolute;
   margin:0 auto;
   /* z-index: 2; */
-  left: 42%;
+  left: 40%;
   top: 45%;
   opacity:0;
   transition: opacity 6s ease-in-out; 
@@ -92,7 +93,7 @@
 
 .igicon{
   width: 18vw;
-  height: 5vh;
+  height: 4.5vh;
   color: rgb(9,9,8);
 }
 
@@ -111,5 +112,54 @@ padding:0;
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
-  
+  .container{
+    height: 30vmin;
+  }
+
+  .burncontainer{
+    display: flex;
+  }
+
+  .filmburn{
+    position: relative;
+    height:60vmin;
+    filter: url('#wavy');
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+
+  .filmburnCLR::after{
+    top: 12vh;
+    animation: slideinbottom 1.5s ;
+    left: -13vmin;
+    right: -193vmin;
+    border: 16vmin solid ;
+    border-image: linear-gradient(to top, white 95%, orange 98%, #af3a94 99%) 35;
+  }
+
+  .filmburnBW::after{
+    top: 12vh;
+    animation: slideinbottom 1.5s ;
+    left: -13vmin;
+    right: -193vmin;
+    border: 16vmin solid ;
+    border-image: linear-gradient(to top, white 95%, orange 98%, #af3a94 99%) 35;
+  }
+
+  @keyframes slideinbottom {
+    0% {
+      top: 24vh;
+    }
+    100% {
+      top: 12vh;
+    }
+  }
+
+  .igicon{
+    height:7vh;
+  }
+
+  .igcontainer{
+    top:52%;
+  }
 }
