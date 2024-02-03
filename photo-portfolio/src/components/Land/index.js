@@ -2,8 +2,11 @@
 import {useEffect, useState} from 'react';
 import {getRandomNumber, calculateSizes, generatePerfs, generateImages} from '../../helpers/utils';
 import styles from './Land.module.css';
-import Image from 'next/image'
+import Image from 'next/image';
+import Photos from '../../../public/images.json'
 
+console.log(Photos);
+console.log(Photos.BWHoriz);
 
 export default function Land(props){
       const [leftPerfs, setLeftPerfs] = useState([]);
@@ -13,10 +16,13 @@ export default function Land(props){
       const [windowSize, setWindowSize] = useState(600);
 
       let sqrColor;
+      let photoList ;
         if(props.isBW){
            sqrColor = "bwsquare";
+           photoList = Photos.BWHoriz;
         }else{
           sqrColor = "clrsquare";
+          photoList = Photos.ClrHoriz;
         }
 
       useEffect(() => {
@@ -42,7 +48,7 @@ export default function Land(props){
 
       if(!initialRendered){
         generatePerfs(31, sqrColor, styles, getRandomNumber, setLeftPerfs, setRightPerfs);
-        generateImages(15, styles, setListImgTag, 'https://photo-port.s3.amazonaws.com/post1-7.jpg', true);
+        generateImages(photoList, styles, setListImgTag, true);
         setInitialinitialRendered(true);
       }
 

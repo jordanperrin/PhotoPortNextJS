@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 import {getRandomNumber, calculateSizes, generatePerfs, generateImages} from '../../helpers/utils';
 import styles from '../Land/Land.module.css';
 import Image from 'next/image'
-//TODO: need to change the way we import these images -> use an 
-import img1 from '../../../public/color1.jpg';
+import Photos from '../../../public/images.json'
 
 
 export default function Port(props){
@@ -16,10 +15,13 @@ export default function Port(props){
 
 
       let sqrColor;
+      let photoList;
       if(props.isBW){
         sqrColor = "bwsquare";
+        photoList = Photos.BWPort;
       }else{
         sqrColor = "clrsquare";
+        photoList = Photos.ClrPort;
       }
 
       useEffect(() => {
@@ -45,7 +47,7 @@ export default function Port(props){
     if(!initialRendered){
       
       generatePerfs(28, sqrColor, styles, getRandomNumber, setLeftPerfs, setRightPerfs);
-      generateImages(9, styles, setListImgTag, 'https://photo-port.s3.amazonaws.com/color1.jpg', false);
+      generateImages(photoList, styles, setListImgTag, true);
       setInitialinitialRendered(true);
     }
       

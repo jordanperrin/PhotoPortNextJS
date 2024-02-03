@@ -9,10 +9,7 @@ export const calculateSizes = () => {
     const squareRef = document.getElementById('square-ref');
   
     const imgConSize = parseInt(imgContainer.clientHeight) + parseInt(getComputedStyle(imgContainer).padding);
-    const squareSize = 2 + parseInt(squareRef.clientHeight) + parseInt(getComputedStyle(squareRef).marginBottom) + parseInt(getComputedStyle(squareRef).marginTop);
-
-    console.log("Image contain size: " + imgConSize + "\nSqaure Size: " + squareSize)
-  
+    const squareSize = 2 + parseInt(squareRef.clientHeight) + parseInt(getComputedStyle(squareRef).marginBottom) + parseInt(getComputedStyle(squareRef).marginTop);  
     return {
       imgConSize,
       squareSize,
@@ -47,13 +44,13 @@ export const generatePerfs = (count, sqrColor, styles, getRandomNumber, setLeftP
   setRightPerfs(listOfRightPerfs);
   }
 
-export const generateImages = (count, styles, setListImgTag, srcImg, orientHoriz) =>{
+export const generateImages = (photoList, styles, setListImgTag, srcImg, orientHoriz) =>{
     let arrayOfImages = [];
     let ratio = orientHoriz ? [1200, 800] : [800,1200];
-    for(let i =0; i <= count; i++){
+    for(let i =0; i <= photoList.length - 1; i++){
         arrayOfImages.push(
             <div className={styles.insideimg} id="first-img">
-                <Image src={srcImg} width={ratio[0]} height={ratio[1]} alt=""/>
+                <Image priority src={photoList[i]} width={ratio[0]} height={ratio[1]} alt=""/>
                 <div className={styles.block}></div>
             </div>
         )
